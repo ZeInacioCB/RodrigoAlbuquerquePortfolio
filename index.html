@@ -17,94 +17,76 @@
 <body>
 
     <!-- START Navbar & Header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid justify-content-between">
-            <!-- START Left elements -->
-            <ul class="d-flex flex-column">
-                <h1 class="m-0">
-                    <a class="navbar-brand" href="#showreel" id="header-title">
-                        Rodrigo Albuquerque
-                    </a>
-                </h1>
-                <p class="mt-0">Gimbal | Camera Operator | Focus Puller</p>
-            </ul>
-            <!-- END Left elements -->
-
-            <!-- START Center elements -->
-            <ul class="navbar-nav flex-row d-none">
-            <!-- Center elements are hidden with d-none -->
-            <!-- If necessary to add center elements, add d-[breakpoint]-flex class to the ul tag above -->
-
-                <!-- First Item -->
-                <li class="nav-item me-3 me-lg-1 active">
-                    <a class="nav-link" href="#">
-                        <span>About Me</span>
-                    </a>
-                </li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-1 p-md-3">
+        <!-- START Left elements -->
+        <a class="navbar-brand d-flex flex-column my-0 ms-3 my-lg-2 ms-lg-5" href="#showreel">
+            <h3 class="mb-0 fw-bold">Rodrigo Albuquerque</h3>
+            <span class="navbar-text mt-0 d-none d-sm-block">Gimbal | Camera Operator | Focus Puller</span>
+        </a>
+        <!-- END Left elements -->
         
-                <!-- Second Item -->
-                <li class="nav-item me-3 me-lg-1">
-                    <a class="nav-link" href="#">
-                        <span><i class="fas fa-video fa-lg"></i></span>
-                    </a>
-                </li>
-            </ul>
-            <!-- END Center elements -->
+        <!-- Navbar for breakpoint below the expand-[sm|md|lg] -->
+        <button 
+            class="navbar-toggler border-0" 
+            type="button" 
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent" 
+            aria-controls="navbarContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- START Right elements -->
-            <ul class="navbar-nav flex-row">
-                <li class="nav-item me-3 me-lg-1">
+        <!-- START Right elements -->
+        <div class="collapse navbar-collapse justify-content-end mx-0" id="navbarContent">
+            <ul class="navbar-nav m-0 ps-3 align-items-xl-center">
+                <li class="nav-item me-0 me-lg-1">
                     <a class="nav-link" href="#">
                         <span>About Me</span>
                     </a>
                 </li>
-
-                <li class="nav-item dropdown me-3 me-lg-1">
-                    <a
-                        class="nav-link dropdown-toggle hidden-arrow"
-                        href="#"
-                        id="navbarDropdownMenuLink"
-                        role="button"
-                        data-mdb-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        <span class="badge rounded-pill badge-notification bg-secondary">My Work</span>
+                <li class="nav-item me-0 me-lg-1">
+                    <a class="nav-link" href="#">
+                        <span>Videomaker</span>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                        <li>
-                            <a class="dropdown-item" href="#">Videomaker</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Focus Puller</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Gimbal</a>
-                        </li>
-                    </ul>
                 </li>
-
-                <li class="nav-item me-3 me-lg-1">
-                    <a class="nav-link d-sm-flex align-items-sm-center" href="#">
-                        <strong class="d-none d-sm-block me-2">Rodrigo Albuquerque</strong>
+                <li class="nav-item me-0 me-lg-1">
+                    <a class="nav-link" href="#">
+                        <span>Focus Puller</span>
+                    </a>
+                </li>
+                <li class="nav-item me-0 me-lg-1">
+                    <a class="nav-link" href="#">
+                        <span>Gimbal</span>
+                    </a>
+                </li>
+                <li class="nav-item me-0 me-lg-1">
+                    <a class="nav-link" href="#">
+                        <span>Contact Me</span>
+                    </a>
+                </li>
+                <li class="nav-item d-inline d-lg-none me-lg-1 d-xl-inline">
+                    <a class="nav-link" href="#">
                         <img
                         src="./images/rod-avatar.jpg"
                         class="rounded-circle"
-                        height="28"
+                        height="40"
                         alt="Portrait of cinematographer Rodrigo Albuquerque"
                         loading="lazy"
                         />
                     </a>
                 </li>
             </ul>
-            <!-- END Right elements -->
         </div>
+        <!-- END Right elements -->
     </nav>
     <!-- END Navbar & Header -->
 
     <!-- START Jumbotron Showreel -->
+    <!-- Add autoplay loop to the video tag in the end !!!!! -->
     <header class="container-fluid bg-black m-auto my-0">
         <div class="row w-100 m-0 bg-black">
-            <video id="showreel" class="w-100 p-0" src="./videos/showreelSample.mp4" type="video/mp4" autoplay loop></video>
+            <video id="showreel" class="w-100 p-0" src="./videos/showreelSample.mp4" type="video/mp4"></video>
         </div>
     </header> 
     <!-- END Jumbotron Showreel -->
