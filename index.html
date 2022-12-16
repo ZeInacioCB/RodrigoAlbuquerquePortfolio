@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigo Albuquerque</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="./js/interactivity.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://kit.fontawesome.com/2fc8e75836.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- START Navbar & Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid justify-content-between">
+            <!-- START Left elements -->
+            <ul class="d-flex flex-column">
+                <h1 class="m-0">
+                    <a class="navbar-brand" href="#showreel" id="header-title">
+                        Rodrigo Albuquerque
+                    </a>
+                </h1>
+                <p class="mt-0">Gimbal | Camera Operator | Focus Puller</p>
+            </ul>
+            <!-- END Left elements -->
+
+            <!-- START Center elements -->
+            <ul class="navbar-nav flex-row d-none">
+            <!-- Center elements are hidden with d-none -->
+            <!-- If necessary to add center elements, add d-[breakpoint]-flex class to the ul tag above -->
+
+                <!-- First Item -->
+                <li class="nav-item me-3 me-lg-1 active">
+                    <a class="nav-link" href="#">
+                        <span>About Me</span>
+                    </a>
+                </li>
+        
+                <!-- Second Item -->
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link" href="#">
+                        <span><i class="fas fa-video fa-lg"></i></span>
+                    </a>
+                </li>
+            </ul>
+            <!-- END Center elements -->
+
+            <!-- START Right elements -->
+            <ul class="navbar-nav flex-row">
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link" href="#">
+                        <span>About Me</span>
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown me-3 me-lg-1">
+                    <a
+                        class="nav-link dropdown-toggle hidden-arrow"
+                        href="#"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        <span class="badge rounded-pill badge-notification bg-secondary">My Work</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="#">Videomaker</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Focus Puller</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Gimbal</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+                        <strong class="d-none d-sm-block me-2">Rodrigo Albuquerque</strong>
+                        <img
+                        src="./images/rod-avatar.jpg"
+                        class="rounded-circle"
+                        height="28"
+                        alt="Portrait of cinematographer Rodrigo Albuquerque"
+                        loading="lazy"
+                        />
+                    </a>
+                </li>
+            </ul>
+            <!-- END Right elements -->
+        </div>
+    </nav>
+    <!-- END Navbar & Header -->
+
+    <!-- START Jumbotron Showreel -->
+    <!--  
+    <header class="container-fluid bg-black m-auto my-0">
+        <div class="row w-100 m-0 bg-black">
+            <video id="showreel" class="w-100 p-0" src="./videos/showreelSample.mp4" type="video/mp4" autoplay loop></video>
+        </div>
+    </header> 
+    --> 
+    <!-- END Jumbotron Showreel -->
+
+    <!-- START Jumbotron Showreel2 with hover effect  -->
+    <header class="container-fluid bg-black m-auto my-0">
+        <div class="row w-100 m-0 bg-black">
+            <video id="showreel2" class="hover-to-play w-100 p-0" src="./videos/showreelSample.mp4" type="video/mp4" loop></video>
+        </div>
+    </header>  
+    <!-- END Jumbotron Showreel2 with hover effect -->
+
+    <!-- START Main Section  -->
+    <main class="container-fluid mx-0 m-0 mt-lg-4 bg-light">
+        <div class="row">
+            <div class="col-6 ps-5 text-end">
+                <div class="container ps-5 pt-5">
+                    <h1>Rodrigo Albuquerque</h1>
+                    <h4>Gimbal | Camera Operator | Focus Puller</h4>
+                    <p class="d-none d-lg-block"><strong>
+                        A lot of things can be said about me. I have developed tremendous works during my time as a Filmmaker.
+                    </strong></p>
+                    <p class="d-none d-lg-block"> However I've been also practicing with my new camera a new type of service.</p>
+                    <button class="btn btn-dark btn-lg">View More</button>
+                </div>
+            </div>
+            <div class="col-6 p-0">
+                <div class="container p-0">
+                    <img src="images/main.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-0 mt-lg-4">
+            <div class="col">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/UAWLKLgk5g4" title="YouTube video" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </main>  
+    <!-- END Main Section -->
+    
+
+    <!-- START Footer Section  -->
+    <footer class="container-fluid mx-0 mt-4 bg-light">
+        <div class="row">
+            <div class="col-6 ps-5 pt-5 text-end">
+                <div class="container ps-5 pt-5">
+                    <h1>Rodrigo Albuquerque</h1>
+                    <h4>Filmmaker | Editor | Cenas</h4>
+                    <p><strong>
+                        A lot of things can be said about me. I have developed tremendous works during my time as a Filmmaker.
+                    </strong></p>
+                    <p> However I've been also practicing with my new camera a new type of service.</p>
+                </div>
+            </div>
+            <div class="col-6 p-0">
+                <div class="container p-0">
+                    <img src="images/main.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>  
+    <!-- END Footer Section -->
+
+
+    <!-- Bootstrap.js and Popper.js for Bootstrap functionalities and interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+</html>
