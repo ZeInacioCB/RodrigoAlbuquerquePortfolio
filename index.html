@@ -27,7 +27,7 @@
         
         <!-- Navbar for breakpoint below the expand-[sm|md|lg] -->
         <button 
-            class="navbar-toggler border-0" 
+            class="navbar-toggler border-0 me-1" 
             type="button" 
             data-bs-toggle="collapse"
             data-bs-target="#navbarContent" 
@@ -42,12 +42,7 @@
             <ul class="navbar-nav m-0 ps-3 align-items-xl-center">
                 <li class="nav-item me-0 me-lg-1">
                     <a class="nav-link" href="#">
-                        <span>About Me</span>
-                    </a>
-                </li>
-                <li class="nav-item me-0 me-lg-1">
-                    <a class="nav-link" href="#">
-                        <span>Videomaker</span>
+                        <span>Gimbal</span>
                     </a>
                 </li>
                 <li class="nav-item me-0 me-lg-1">
@@ -57,12 +52,7 @@
                 </li>
                 <li class="nav-item me-0 me-lg-1">
                     <a class="nav-link" href="#">
-                        <span>Gimbal</span>
-                    </a>
-                </li>
-                <li class="nav-item me-0 me-lg-1">
-                    <a class="nav-link" href="#">
-                        <span>Contact Me</span>
+                        <span>About</span>
                     </a>
                 </li>
                 <li class="nav-item d-inline d-lg-none me-lg-1 d-xl-inline">
@@ -86,7 +76,7 @@
     <!-- Add autoplay loop to the video tag in the end !!!!! -->
     <header class="container-fluid bg-black m-auto my-0">
         <div class="row w-100 m-0 bg-black">
-            <video id="showreel" class="w-100 p-0" src="./videos/showreelSample.mp4" type="video/mp4"></video>
+            <video id="showreel" class="w-100 p-0" src="./videos/showreelSample.mp4" type="video/mp4" autoplay loop></video>
         </div>
     </header> 
     <!-- END Jumbotron Showreel -->
@@ -135,21 +125,45 @@
 
     <!-- START Footer Section  -->
     <footer class="container-fluid mx-0 mt-4 bg-light">
-        <div class="row">
-            <div class="col-6 ps-5 pt-5 text-end">
-                <div class="container ps-5 pt-5">
-                    <h1>Rodrigo Albuquerque</h1>
-                    <h4>Filmmaker | Editor | Cenas</h4>
-                    <p><strong>
-                        A lot of things can be said about me. I have developed tremendous works during my time as a Filmmaker.
-                    </strong></p>
-                    <p> However I've been also practicing with my new camera a new type of service.</p>
-                </div>
+        <div class="row d-flex justify-content-evenly justify-content-md-center text-center pt-md-3">
+            <div class="col-3 d-none d-md-block">
+                <h6>About</h6>
+                <p>I am Rodrigo Albuquerque</p>
             </div>
-            <div class="col-6 p-0">
-                <div class="container p-0">
-                    <img src="images/main.jpg" class="img-fluid" alt="">
-                </div>
+            <div class="col-3">
+                <h6>Latest Works</h6>
+                <p><a class="nav-link" href="#">Ducati</a></p>
+            </div>
+            <div class="col-3">
+                <h6>Contact</h6>
+                <p>
+                    <strong>Rodrigo Albuquerque</strong><br>
+                    Av. Cenas <br>
+                    +351 968 377 019<br>
+                    <a class="nav-link" href="mailto:rodalbuquerque@gmail.com">rodrigo@albuquerque.com</a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                      <a class="nav-link text-dark" href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-dark" href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-dark" href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+                    </li>
+                  </ul>
+            </div>
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="col">
+                <span class="text-secondary">
+                    Copyright © 2022 Rodrigo Albuquerque | Gimbal | Focus Puller
+                </span>
             </div>
         </div>
     </footer>  
