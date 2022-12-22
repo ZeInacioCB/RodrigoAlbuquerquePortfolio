@@ -1,7 +1,10 @@
+/* importing the general font family */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* general styles --> font-family and anchor tags*/
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -14,11 +17,18 @@ a:hover {
     transition: color .25s ease-in-out;
 }
 
+/* Try different approach for the change of pages with interactivity */
+#body-gimbal, #body-focus-puller, #body-about {
+    display: none;
+}
+
+/* test to eventually make the video to fit the screen absolutely */
 .video-absolute-fill {
     height: 100%;
     width: auto;
 }
 
+/* main home body background image */
 .custom-bg-img {
     background-image: url("../images/main2.jpg"); 
     background-position: center; /* Center the image */
@@ -30,7 +40,7 @@ a:hover {
     max-width: 1000px; /* override Bootstrap max-width of 540px for md breakpoint */
 }
 
-
+/* custom footer font-size that needed to be smaller */
 .custom-text-footer {
     font-size: 0.75rem;
 }

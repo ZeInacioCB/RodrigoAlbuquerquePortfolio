@@ -19,9 +19,9 @@
     <!-- START Navbar & Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-1 p-md-3">
         <!-- START Left elements -->
-        <a class="navbar-brand d-flex flex-column my-0 ms-3 my-lg-2 ms-lg-5" href="index.html#showreel">
+        <a class="navbar-brand d-flex flex-column my-0 ms-3 my-lg-2 ms-lg-5" href="#showreel" id="logo-header">
             <h3 class="mb-0 fw-bold">Rodrigo Albuquerque</h3>
-            <span class="navbar-text mt-0 d-none d-sm-block">Gimbal | Camera Operator | Focus Puller</span>
+            <!--<span class="navbar-text mt-0 d-none d-sm-block">Gimbal | Camera Operator | Focus Puller</span> --> 
         </a>
         <!-- END Left elements -->
         
@@ -41,27 +41,22 @@
         <div class="collapse navbar-collapse justify-content-end mx-0" id="navbarContent">
             <ul class="navbar-nav m-0 ps-3 align-items-xl-center">
                 <li class="nav-item me-0 me-lg-1">
-                    <a class="nav-link active" href="index.html">
-                        <span>Home</span>
+                    <a class="nav-link navLinkChange" href="#" id="btn-gimbal">
+                        Gimbal
                     </a>
                 </li>
                 <li class="nav-item me-0 me-lg-1">
-                    <a class="nav-link" href="gimbal.html">
-                        <span>Gimbal</span>
+                    <a class="nav-link navLinkChange" href="#" id="btn-focus-puller">
+                        Focus Puller
                     </a>
                 </li>
                 <li class="nav-item me-0 me-lg-1">
-                    <a class="nav-link" href="focus-puller.html">
-                        <span>Focus Puller</span>
-                    </a>
-                </li>
-                <li class="nav-item me-0 me-lg-1">
-                    <a class="nav-link" href="#about">
-                        <span>About</span>
+                    <a class="nav-link navLinkChange" href="#" id="btn-about">
+                        About
                     </a>
                 </li>
                 <li class="nav-item d-inline d-lg-none me-lg-1 d-xl-inline">
-                    <a class="nav-link" href="index.html#about">
+                    <a class="nav-link" href="#">
                         <img
                         src="./images/rod-avatar.jpg"
                         class="rounded-circle"
@@ -78,13 +73,12 @@
     <!-- END Navbar & Header -->
 
     <!-- START Jumbotron Showreel -->
-    <header class="container-fluid bg-black m-auto my-0">
+    <section class="container-fluid bg-black m-auto my-0 navContent" id="showreel">
         <div class="row w-100 m-0 bg-black video-absolute-fill">
             <video 
-                autoplay loop
-                id="showreel" 
+                autoplay loop muted
                 class="w-100 p-0" 
-                src="videos/Showreel_Rod.mp4" 
+                src="videos/showreelSample.mp4" 
                 type="video/mp4" 
                 poster="images/frame-capture.PNG"
                 ></video>
@@ -98,11 +92,11 @@
     </header>  
     --> 
     <!-- END Jumbotron Showreel2 with hover effect -->
-    </header> 
+    </section> 
     <!-- END Jumbotron Showreel -->
 
-    <!-- START Main Section  -->
-    <main class="container-fluid mx-0 mt-2 mt-lg-4">
+    <!-- START About Section  -->
+    <section class="container-fluid mx-0 mt-2 mt-lg-4 navContent" id="body-about" style="display: none;">
         <div class="row flex-column-reverse flex-md-row bg-light"  id="about">
             <div class="col-12 col-md-6 my-3 my-lg-4 px-4">
                 <div class="container mb-3">
@@ -124,7 +118,82 @@
                 </div>
             </div>
         </div>
+    </section>  
+    <!-- END About Section -->
 
+    <!-- START Gimbal Section  -->
+    <section class="container-fluid bg-black navContent" id="body-gimbal">
+        <div class="row">
+            <div class="col-12 col-lg-4 px-0">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/rQ-dbRtAz14" title="YouTube video" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 px-0">
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=1&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture" 
+                        allowfullscreen 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                        title="Cinematographer Reel">
+                    </iframe>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 px-0">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/76EEf80Azeg" title="YouTube video" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 px-0">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/Xq6h5SWfv6s" title="YouTube video" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2 mt-lg-4 mx-md-3 mx-lg-5">
+            <div class="col px-0">
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=1&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture" 
+                        allowfullscreen 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                        title="Cinematographer Reel">
+                    </iframe>
+                </div>
+            </div>
+            <div class="row mt-2 mt-lg-4 mx-md-3 mx-lg-5">
+                <div class="col px-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/76EEf80Azeg" title="YouTube video" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2 mt-lg-4 mx-md-3 mx-lg-5">
+                <div class="col px-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/83R61DzPbp0" title="YouTube video" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2 mt-lg-4 mx-md-3 mx-lg-5">
+                <div class="col px-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/Xq6h5SWfv6s" title="YouTube video" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+    </section>
+    <!-- END Gimbal Section  -->
+
+    <!-- START Focus Puller Section  -->
+    <section class="container-fluid navContent" id="body-focus-puller">
         <div class="row mt-2 mt-lg-4 mx-md-3 mx-lg-5">
             <div class="col px-0">
                 <div class="ratio ratio-16x9">
@@ -132,16 +201,15 @@
                 </div>
             </div>
         </div>
-    </main>  
-    <!-- END Main Section -->
-    
+    </section>
+    <!-- END Focus Puller Section  -->
 
     <!-- START Footer Section  -->
-    <footer class="container-fluid mt-2 mt-lg-4 bg-light">
+    <footer class="container-fluid bg-light">
         <div class="row flex-column flex-md-row justify-content-center text-center pt-3">
             <div class="col-12 col-md-4 col-lg-3 ps-md-5 pb-2">
                 <h6>About</h6>
-                <p>I am Rodrigo Albuquerque</p>
+                <p>I am Rodrigo Albuquerque, Gimbal Operator and Focus Puller based in Lisbon. Give me a challenge, I love it. </p>
             </div>
             <div class="col-12 col-md-4 col-lg-3 pb-2">
                 <h6>Latest Works</h6>
@@ -151,9 +219,8 @@
                 <h6>Contact</h6>
                 <p>
                     Rodrigo Albuquerque<br>
-                    Av. Cenas <br>
+                    Lisboa, Portugal<br>
                     +351 968 377 019<br>
-                    <a class="nav-link" href="mailto:rodalbuquerque@gmail.com">rodrigo@albuquerque.com</a>
                 </p>
             </div>
         </div>
@@ -164,13 +231,16 @@
             <div class="col">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                      <a class="text-white px-2" href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                      <a class="text-white px-2" href="https://www.instagram.com/rodrigo_alb/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
                     </li>
                     <li class="nav-item">
-                      <a class="text-white px-2" href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                      <a class="text-white px-2" href="https://vimeo.com/rodrigoalbuquerque" target="_blank"><i class="fa-brands fa-vimeo-v fa-xl"></i></a>
                     </li>
                     <li class="nav-item">
-                      <a class="text-white px-2" href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+                      <a class="text-white px-2" href="https://www.behance.net/rodrigo_alb" target="_blank"><i class="fa-brands fa-behance fa-xl"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="text-white px-2" href="rodrigoalbuquerqueimagem@gmail.com"><i class="fa-regular fa-envelope fa-xl"></i></a>
                     </li>
                   </ul>
             </div>
