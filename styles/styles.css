@@ -45,12 +45,37 @@ a:hover {
     font-size: 0.75rem;
 }
 
-/* Custom modal button */
+/* Custom grid, image, hover overlay effect and modal button */
 .custom-btn {
     position:absolute;
     right:-50px;
     top:0;
     z-index:999;
-    font-size:2rem;
+    font-size:1.5rem;
 }
 
+.custom-img-overlay { 
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+.custom-img-overlay div {
+    z-index: 10;
+    border-top: 3rem solid rgba(0, 0, 0);
+    border-bottom: 3rem solid rgba(0, 0, 0);
+    line-height: 1.1em;
+    opacity: 0;
+    letter-spacing: 1px;
+    transition: opacity 0.45s ease;
+    transition: border 0;
+}
+.custom-img-overlay > img {
+    transition: opacity 0.45s ease;
+}
+.custom-img-overlay:hover > img {
+    opacity: 0.40;
+}
+.custom-img-overlay:hover div {
+    opacity: 1;
+}
