@@ -72,7 +72,7 @@
     </nav>
     <!-- END Navbar & Header -->
 
-    <!-- START Jumbotron Showreel -->
+    <!-- START Showreel -->
     <section class="container-fluid bg-black m-auto my-0 navContent" id="showreel">
         <div class="row w-100 m-0 bg-black video-absolute-fill">
             <video 
@@ -93,19 +93,19 @@
     --> 
     <!-- END Jumbotron Showreel2 with hover effect -->
     </section> 
-    <!-- END Jumbotron Showreel -->
+    <!-- END Showreel -->
 
     <!-- START About Section  -->
-    <section class="container-fluid mx-0 mt-2 mt-lg-4 navContent" id="body-about" style="display: none;">
+    <section class="container-fluid mx-0 my-2 my-lg-4 navContent" id="body-about" style="display: none;">
         <div class="row flex-column-reverse flex-md-row bg-light"  id="about">
             <div class="col-12 col-md-6 my-3 my-lg-4 px-4">
-                <div class="container mb-3">
+                <div class="container mb-3 px-2 px-lg-5">
                     <h2>Artist Bio</h2>
                     <h5 class="mb-3">Rodrigo Albuquerque</h5>
-                    <p class="text-dark mb-2">
+                    <p class="text-dark mb-2 pe-lg-5 me-lg-5">
                         A lot of things can be said about me. I have developed tremendous works during my time as a Filmmaker.
                     </p>
-                    <p class="text-secondary"> 
+                    <p class="text-secondary pe-lg-5 me-lg-5"> 
                         However I've been also practicing with my new camera a new type of service.
                     </p>
                     <button class="btn btn-dark">View More</button>
@@ -123,70 +123,101 @@
 
     <!-- START Gimbal Section  -->
     <section class="container-fluid bg-black navContent" id="body-gimbal">
-        <div class="row">
-            <div class="col-12 col-lg-4 px-0">
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/rQ-dbRtAz14" title="YouTube video" allowfullscreen></iframe>
+        <div class="row py-2 py-lg-4">
+            
+            <!-- first image card with trigger modal -->
+            <div class="col-10 col-md-8 col-lg-4 px-0">
+                <div class="ratio ratio-16x9" data-bs-toggle="modal" data-bs-target="#exampleModalVid">
+                    <img src="images/frame-vimeo1.png" alt="Frame Poster">
                 </div>
             </div>
-            <div class="col-12 col-lg-4 px-0">
+  
+            <!-- first video modal -->
+            <div class="modal fade" id="exampleModalVid" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Cinematographer Reel">
+                                </iframe>
+                            </div>
+                            <h1 class="modal-title">Hello, it's me</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-4 px-0">
                 <div class="ratio ratio-16x9">
                     <iframe 
-                        src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=1&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                        src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
                         frameborder="0" 
                         allow="autoplay; fullscreen; picture-in-picture" 
                         allowfullscreen 
                         style="position:absolute;top:0;left:0;width:100%;height:100%;" 
                         title="Cinematographer Reel">
                     </iframe>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4 px-0">
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/76EEf80Azeg" title="YouTube video" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4 px-0">
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/Xq6h5SWfv6s" title="YouTube video" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-2 mt-lg-4 mx-md-3 mx-lg-5">
-            <div class="col px-0">
-                <div class="ratio ratio-16x9">
-                    <iframe 
-                        src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=1&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
-                        frameborder="0" 
-                        allow="autoplay; fullscreen; picture-in-picture" 
-                        allowfullscreen 
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                        title="Cinematographer Reel">
-                    </iframe>
-                </div>
-            </div>
-            <div class="row mt-2 mt-lg-4 mx-md-3 mx-lg-5">
-                <div class="col px-0">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/76EEf80Azeg" title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-2 mt-lg-4 mx-md-3 mx-lg-5">
-                <div class="col px-0">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/83R61DzPbp0" title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-2 mt-lg-4 mx-md-3 mx-lg-5">
-                <div class="col px-0">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/Xq6h5SWfv6s" title="YouTube video" allowfullscreen></iframe>
-                    </div>
                 </div>
             </div>
             
+            <div class="col-10 col-md-8 col-lg-4 px-0">
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture" 
+                        allowfullscreen 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                        title="Cinematographer Reel">
+                    </iframe>
+                </div>
+            </div> 
+
+            <div class="col-10 col-md-8 col-lg-4 px-0">
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture" 
+                        allowfullscreen 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                        title="Cinematographer Reel">
+                    </iframe>
+                </div>
+            </div> 
+            
+            <div class="col-10 col-md-8 col-lg-4 px-0">
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture" 
+                        allowfullscreen 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                        title="Cinematographer Reel">
+                    </iframe>
+                </div>
+            </div>  
+            
+            <div class="col-10 col-md-8 col-lg-4 px-0">
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture" 
+                        allowfullscreen 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                        title="Cinematographer Reel">
+                    </iframe>
+                </div>
+            </div>  
+
         </div>
         <script src="https://player.vimeo.com/api/player.js"></script>
     </section>
@@ -207,7 +238,7 @@
     <!-- START Footer Section  -->
     <footer class="container-fluid bg-light">
         <div class="row flex-column flex-md-row justify-content-center text-center pt-3">
-            <div class="col-12 col-md-4 col-lg-3 ps-md-5 pb-2">
+            <div class="col-8 mx-auto mx-md-0 col-md-4 col-lg-3 ps-md-5 pb-2">
                 <h6>About</h6>
                 <p>I am Rodrigo Albuquerque, Gimbal Operator and Focus Puller based in Lisbon. Give me a challenge, I love it. </p>
             </div>

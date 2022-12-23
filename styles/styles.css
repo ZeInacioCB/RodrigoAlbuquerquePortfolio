@@ -45,3 +45,12 @@ a:hover {
     font-size: 0.75rem;
 }
 
+/* Custom modal button */
+.custom-btn {
+    position:absolute;
+    right:-50px;
+    top:0;
+    z-index:999;
+    font-size:2rem;
+}
+
