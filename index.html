@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="https://kit.fontawesome.com/2fc8e75836.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="bg-dark">
 
     <!-- START Navbar & Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-1 p-md-3">
         <!-- START Left elements -->
-        <a class="navbar-brand d-flex flex-column my-0 ms-3 my-lg-2 ms-lg-5" href="#showreel" id="logo-header">
-            <h3 class="mb-0 fw-bold">Rodrigo Albuquerque</h3>
+        <a class="navbar-brand d-flex flex-column my-2 ms-3 my-lg-2 ms-lg-5" href="#showreel" id="logo-header">
+            <h2 class="mb-0 fw-bold">Rodrigo Albuquerque</h2>
             <!--<span class="navbar-text mt-0 d-none d-sm-block">Gimbal | Camera Operator | Focus Puller</span> --> 
         </a>
         <!-- END Left elements -->
@@ -39,23 +39,23 @@
 
         <!-- START Right elements -->
         <div class="collapse navbar-collapse justify-content-end mx-0" id="navbarContent">
-            <ul class="navbar-nav m-0 ps-3 align-items-xl-center">
-                <li class="nav-item me-0 me-lg-1">
+            <ul class="navbar-nav m-0 ps-3 align-items-xl-center fs-5">
+                <li class="nav-item me-0 me-lg-2">
                     <a class="nav-link navLinkChange" href="#" id="btn-gimbal">
                         Gimbal
                     </a>
                 </li>
-                <li class="nav-item me-0 me-lg-1">
+                <li class="nav-item me-0 me-lg-2">
                     <a class="nav-link navLinkChange" href="#" id="btn-focus-puller">
                         Focus Puller
                     </a>
                 </li>
-                <li class="nav-item me-0 me-lg-1">
+                <li class="nav-item me-0 me-lg-2">
                     <a class="nav-link navLinkChange" href="#" id="btn-about">
                         About
                     </a>
                 </li>
-                <li class="nav-item d-inline d-lg-none me-lg-1 d-xl-inline">
+                <li class="nav-item d-inline d-lg-none me-lg-2 d-xl-inline">
                     <a class="nav-link" href="#">
                         <img
                         src="./images/rod-avatar.jpg"
@@ -74,10 +74,10 @@
 
     <!-- START Showreel -->
     <section class="container-fluid bg-black m-auto my-0 navContent" id="showreel">
-        <div class="row w-100 m-0 bg-black video-absolute-fill">
+        <div class="row w-100 m-0 bg-black">
             <video 
                 autoplay loop muted
-                class="w-100 p-0" 
+                class="ratio ratio-16x9" 
                 src="videos/showreelSample.mp4" 
                 type="video/mp4" 
                 poster="images/frame-capture.PNG"
@@ -96,7 +96,7 @@
     <!-- END Showreel -->
 
     <!-- START About Section  -->
-    <section class="container-fluid mx-0 my-2 my-lg-4 navContent" id="body-about" style="display: none;">
+    <section class="container-fluid mx-0 py-2 py-lg-4 bg-white navContent" id="body-about">
         <div class="row flex-column-reverse flex-md-row bg-light"  id="about">
             <div class="col-12 col-md-6 my-3 my-lg-4 px-4">
                 <div class="container mb-3 px-2 px-lg-5">
@@ -122,18 +122,22 @@
     <!-- END About Section -->
 
     <!-- START Gimbal Section  -->
-    <section class="container-fluid bg-black navContent" id="body-gimbal">
-        <div class="row py-2 py-lg-4">
+    <section class="container-fluid navContent" id="body-gimbal">
+        <div class="row p-0">
             
-            <!-- first image card with trigger modal -->
-            <div class="col-10 col-md-8 col-lg-4 px-0">
-                <div class="ratio ratio-16x9">
-                    <img src="images/frame-vimeo1.png" alt="Frame Poster">
+            <!-- START image triggering modal -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                    <img src="images/frame-vimeo1.png" alt="Frame poster example"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h3>
+                            Rodrigo <br/>
+                            Showreel
+                        </h3>
+                    </div>
                 </div>
             </div>
-  
-            <!-- first video modal -->
-            <div class="modal fade" id="exampleModalVid" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="modalVideo1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl modal-dialog-centered">
                     <div class="modal-content">
                         <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -152,9 +156,11 @@
                     </div>
                 </div>
             </div>
+            <!-- END image triggering modal -->
 
-            <div class="col-12 col-md-8 col-lg-4 px-0">
-                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#exampleModalVid">
+            <!-- START image triggering modal -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#modalVideo2">
                     <img src="images/frame-vimeo1.png" alt="Frame poster example"/>
                     <div class="d-flex flex-column justify-content-center text-center text-white">
                         <h3>
@@ -164,72 +170,204 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="col-10 col-md-8 col-lg-4 px-0">
-                <div class="ratio ratio-16x9">
-                    <iframe 
-                        src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
-                        frameborder="0" 
-                        allow="autoplay; fullscreen; picture-in-picture" 
-                        allowfullscreen 
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                        title="Cinematographer Reel">
-                    </iframe>
+            <div class="modal fade" id="modalVideo2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Cinematographer Reel">
+                                </iframe>
+                            </div>
+                            <h1 class="modal-title">Hello, it's me</h1>
+                        </div>
+                    </div>
                 </div>
-            </div> 
+            </div>
+            <!-- END image triggering modal -->
+            
+            <!-- START image triggering modal -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#modalVideo3">
+                    <img src="images/frame-vimeo1.png" alt="Frame poster example"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h3>
+                            Rodrigo <br/>
+                            Showreel
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalVideo3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Cinematographer Reel">
+                                </iframe>
+                            </div>
+                            <h1 class="modal-title">Hello, it's me</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal -->
 
-            <div class="col-10 col-md-8 col-lg-4 px-0">
-                <div class="ratio ratio-16x9">
-                    <iframe 
-                        src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
-                        frameborder="0" 
-                        allow="autoplay; fullscreen; picture-in-picture" 
-                        allowfullscreen 
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                        title="Cinematographer Reel">
-                    </iframe>
+            <!-- START image triggering modal -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#modalVideo4">
+                    <img src="images/frame-vimeo1.png" alt="Frame poster example"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h3>
+                            Rodrigo <br/>
+                            Showreel
+                        </h3>
+                    </div>
                 </div>
-            </div> 
+            </div>
+            <div class="modal fade" id="modalVideo4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Cinematographer Reel">
+                                </iframe>
+                            </div>
+                            <h1 class="modal-title">Hello, it's me</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal -->
             
-            <div class="col-10 col-md-8 col-lg-4 px-0">
-                <div class="ratio ratio-16x9">
-                    <iframe 
-                        src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
-                        frameborder="0" 
-                        allow="autoplay; fullscreen; picture-in-picture" 
-                        allowfullscreen 
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                        title="Cinematographer Reel">
-                    </iframe>
+            <!-- START image triggering modal -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#modalVideo5">
+                    <img src="images/frame-vimeo1.png" alt="Frame poster example"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h3>
+                            Rodrigo <br/>
+                            Showreel
+                        </h3>
+                    </div>
                 </div>
-            </div>  
+            </div>
+            <div class="modal fade" id="modalVideo5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Cinematographer Reel">
+                                </iframe>
+                            </div>
+                            <h1 class="modal-title">Hello, it's me</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal -->  
             
-            <div class="col-10 col-md-8 col-lg-4 px-0">
-                <div class="ratio ratio-16x9">
-                    <iframe 
-                        src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
-                        frameborder="0" 
-                        allow="autoplay; fullscreen; picture-in-picture" 
-                        allowfullscreen 
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                        title="Cinematographer Reel">
-                    </iframe>
+            <!-- START image triggering modal -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#modalVideo6">
+                    <img src="images/frame-vimeo1.png" alt="Frame poster example"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h3>
+                            Rodrigo <br/>
+                            Showreel
+                        </h3>
+                    </div>
                 </div>
-            </div>  
+            </div>
+            <div class="modal fade" id="modalVideo6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/289834615?h=f364cdfb07&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Cinematographer Reel">
+                                </iframe>
+                            </div>
+                            <h1 class="modal-title">Hello, it's me</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal -->
 
         </div>
-        <script src="https://player.vimeo.com/api/player.js"></script>
     </section>
     <!-- END Gimbal Section  -->
 
     <!-- START Focus Puller Section  -->
     <section class="container-fluid navContent" id="body-focus-puller">
-        <div class="row mt-2 mt-lg-4 mx-md-3 mx-lg-5">
-            <div class="col px-0">
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/UAWLKLgk5g4" title="YouTube video" allowfullscreen></iframe>
+        <div class="row p-0">
+            
+            <!-- START image triggering modal -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#ducatiVideo">
+                    <img src="images/frame-ducati.png" alt="Frame poster example"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h4>NEW DUCATI PANIGALE V4 R</h4>
+                        <h5>This is Rancing</h5>
+                    </div>
                 </div>
             </div>
+            <div class="modal fade" id="ducatiVideo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content bg-light">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/783723648?h=783723648&amp;badge=0&amp;autoplay=0&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Cinematographer Reel">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h4>NEW DUCATI PANIGALE V4 R</h4>
+                                <h5>This is Rancing</h5>
+                                <p>
+                                    Producer:
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal -->
+            
         </div>
     </section>
     <!-- END Focus Puller Section  -->
@@ -287,6 +425,7 @@
 
 
     <!-- Bootstrap.js and Popper.js for Bootstrap functionalities and interactivity -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" 

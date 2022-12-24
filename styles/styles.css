@@ -48,8 +48,8 @@ a:hover {
 /* Custom grid, image, hover overlay effect and modal button */
 .custom-btn {
     position:absolute;
-    right:-50px;
-    top:0;
+    right:0;
+    top:-50px;
     z-index:999;
     font-size:1.5rem;
 }
@@ -67,11 +67,9 @@ a:hover {
     line-height: 1.1em;
     opacity: 0;
     letter-spacing: 1px;
-    transition: opacity 0.45s ease;
-    transition: border 0;
 }
-.custom-img-overlay > img {
-    transition: opacity 0.45s ease;
+.custom-img-overlay * {
+    transition: all 500ms ease;
 }
 .custom-img-overlay:hover > img {
     opacity: 0.40;
