@@ -25,3 +25,11 @@ function openSection(e, sectionName) {
 }
 
 // funtion to unmute video when clicking
+let video = document.querySelector("section#showreel video");
+video.onclick = () => video.muted ? video.muted = false : video.muted = true;
+//video.onmouseover = () => { if(video.muted) video.muted = false;}
+console.log(video)
+
+// function to stop and play video on modals
+let iVimeo = document.querySelectorAll("iframe");
+console.log(iVimeo);
