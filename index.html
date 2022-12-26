@@ -19,7 +19,11 @@
     <!-- START Navbar & Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-1 p-md-3">
         <!-- START Left elements -->
-        <a class="navbar-brand d-flex flex-column my-2 ms-3 my-lg-2 ms-lg-5" href="#showreel" id="logo-header">
+        <a 
+            class="navbar-brand d-flex flex-column my-2 ms-3 my-lg-2 ms-lg-5" 
+            href="#showreel" ´
+            id="logo-header"
+            onclick="openSection(event, 'showreel')">
             <h2 class="mb-0 fw-bold">Rodrigo Albuquerque</h2>
             <!--<span class="navbar-text mt-0 d-none d-sm-block">Gimbal | Camera Operator | Focus Puller</span> --> 
         </a>
@@ -41,22 +45,22 @@
         <div class="collapse navbar-collapse justify-content-end mx-0" id="navbarContent">
             <ul class="navbar-nav m-0 ps-3 align-items-xl-center fs-5">
                 <li class="nav-item me-0 me-lg-2">
-                    <a class="nav-link navLinkChange" href="#" id="btn-gimbal">
+                    <a class="nav-link navLinkChange" href="#" onclick="openSection(event, 'body-gimbal')">
                         Gimbal
                     </a>
                 </li>
                 <li class="nav-item me-0 me-lg-2">
-                    <a class="nav-link navLinkChange" href="#" id="btn-focus-puller">
+                    <a class="nav-link navLinkChange" href="#" onclick="openSection(event, 'body-focus-puller')">
                         Focus Puller
                     </a>
                 </li>
                 <li class="nav-item me-0 me-lg-2">
-                    <a class="nav-link navLinkChange" href="#" id="btn-about">
+                    <a class="nav-link navLinkChange" href="#" onclick="openSection(event, 'body-about')">
                         About
                     </a>
                 </li>
                 <li class="nav-item d-inline d-lg-none me-lg-2 d-xl-inline">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" onclick="openSection(event, 'showreel')">
                         <img
                         src="./images/rod-avatar.jpg"
                         class="rounded-circle"
@@ -416,7 +420,10 @@
         <div class="row bg-dark justify-content-center text-center py-4">
             <div class="col">
                 <span class="text-white-50 custom-text-footer">
-                    Copyright © 2022 Rodrigo Albuquerque | <span><a href="gimbal.html">Gimbal</a></span> | <span><a href="focus-puller.html">Focus Puller</a></span> 
+                    Copyright © 2022 
+                    <span><a href="#" onclick="openSection(event, 'showreel')">Rodrigo Albuquerque</a></span> | 
+                    <span><a href="#" onclick="openSection(event, 'body-gimbal')">Gimbal</a></span> | 
+                    <span><a href="#" onclick="openSection(event, 'body-focus-puller')">Focus Puller</a></span> 
                 </span>
             </div>
         </div>
