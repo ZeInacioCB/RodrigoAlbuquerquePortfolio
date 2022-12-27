@@ -1,10 +1,10 @@
-// class to make an mp4 video play while hovering
+// class to make an mp4 video play while hovering - not being use at the moment
 const clip = document.querySelectorAll(".hover-to-play");
 for (let i = 0; i < clip.length; i++) { clip[i].addEventListener("mouseenter", function (e) { clip[i].play();
   }); clip[i].addEventListener("mouseout", function (e) { clip[i].pause(); }); 
 }
 
-// function that reveals and opens different sections
+// navigate the site - reveals and hides different sections
 function openSection(e, sectionName) {
 
   // Get all elements with class="navContent" and hide them
@@ -24,12 +24,37 @@ function openSection(e, sectionName) {
   e.target.classList.add("active");
 }
 
-// funtion to unmute video when clicking
+// Toggle between unmute and mute when clicking in main video
 let video = document.querySelector("section#showreel video");
 video.onclick = () => video.muted ? video.muted = false : video.muted = true;
-//video.onmouseover = () => { if(video.muted) video.muted = false;}
-console.log(video)
 
-// function to stop and play video on modals
-let iVimeo = document.querySelectorAll("iframe");
-console.log(iVimeo);
+
+// Adding event handlers to modals and iframes so that the videos starts and stops when  function to stop and play video on ALL modals
+function setModalToAutoplayAndPause() {
+  const alliframes = document.querySelectorAll('iframe.modal-video');
+  const allModals = document.querySelectorAll(".modal");
+
+  for (let i = 0; i < allModals.length; i++) {
+    // defining the modal and iframe for the loop
+    const modal = allModals[i];
+    const iframeVideo = alliframes[i];
+
+    // adding the event handler to start the video to each modal
+    modal.addEventListener('shown.bs.modal', function () {
+      let stopSrc = iframeVideo.src;
+      let playSrc = stopSrc.replace("autoplay=0", "autoplay=1");
+      iframeVideo.src = playSrc;
+    });
+
+    // adding the event handler to start the video to each modal
+    modal.addEventListener('hide.bs.modal', function () {
+      let playSrc = iframeVideo.src;
+      let stopSrc = playSrc.replace("autoplay=1", "autoplay=0");
+      iframeVideo.src = stopSrc;
+    });
+    
+  }
+
+} 
+
+setModalToAutoplayAndPause();
