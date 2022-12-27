@@ -40,7 +40,7 @@ function setModalToAutoplayAndPause() {
     const iframeVideo = alliframes[i];
 
     // adding the event handler to start the video to each modal
-    modal.addEventListener('shown.bs.modal', function () {
+    modal.addEventListener('show.bs.modal', function () {
       let stopSrc = iframeVideo.src;
       let playSrc = stopSrc.replace("autoplay=0", "autoplay=1");
       iframeVideo.src = playSrc;

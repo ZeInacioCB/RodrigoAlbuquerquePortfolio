@@ -77,3 +77,7 @@ a:hover {
 .custom-img-overlay:hover div {
     opacity: 1;
 }
+
+.modal-backdrop {
+    opacity: .80 !important;
+ }
