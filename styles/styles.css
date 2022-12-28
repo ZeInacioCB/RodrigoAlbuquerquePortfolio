@@ -62,8 +62,8 @@ a:hover {
 }
 .custom-img-overlay div {
     z-index: 10;
-    border-top: 3rem solid rgba(0, 0, 0);
-    border-bottom: 3rem solid rgba(0, 0, 0);
+    /*border-top: 3rem solid rgba(0, 0, 0);*/
+    /*border-bottom: 3rem solid rgba(0, 0, 0);*/
     line-height: 1.1em;
     opacity: 0;
     letter-spacing: 1px;
@@ -79,5 +79,5 @@ a:hover {
 }
 
 .modal-backdrop {
-    opacity: .80 !important;
+    opacity: .85 !important;
  }

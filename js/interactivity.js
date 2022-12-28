@@ -25,9 +25,20 @@ function openSection(e, sectionName) {
 }
 
 // Toggle between unmute and mute when clicking in main video
-let video = document.querySelector("section#showreel video");
-video.onclick = () => video.muted ? video.muted = false : video.muted = true;
+// let video = document.querySelector("section#showreel video");
+// video.onclick = () => video.muted ? video.muted = false : video.muted = true;
 
+// Manipulating video sound to improve UX
+/*
+let showreelVideo = document.getElementById("showreel-video");
+let unmuteHanlder = function() {
+  let mutedSrc = showreelVideo.src;
+  let unmutedSrc = mutedSrc.replace("muted=1", "muted=0");
+  showreelVideo.src = unmutedSrc;
+  showreelVideo.removeEventListener('mouseenter', unmuteHanlder);
+}
+showreelVideo.addEventListener('mouseenter', unmuteHanlder);
+*/
 
 // Adding event handlers to modals and iframes so that the videos starts and stops when  function to stop and play video on ALL modals
 function setModalToAutoplayAndPause() {

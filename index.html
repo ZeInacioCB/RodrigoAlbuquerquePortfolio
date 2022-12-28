@@ -24,7 +24,7 @@
             href="#showreel"
             id="logo-header"
             onclick="openSection(event, 'showreel')">
-            <h3 class="mb-0 fw-bold">Rodrigo Albuquerque</h3>
+            <h2 class="mb-0 fw-light">Rodrigo Albuquerque</h2>
             <!--<span class="navbar-text mt-0 d-none d-sm-block">Gimbal | Camera Operator | Focus Puller</span> --> 
         </a>
         <!-- END Left elements -->
@@ -78,24 +78,26 @@
 
     <!-- START Showreel -->
     <section class="container-fluid bg-black m-auto my-0 navContent" id="showreel">
-        <div class="row w-100 m-0 bg-black">
+        <div class="row ratio ratio-16x9 px-0 px-lg-4">
+            <iframe 
+                src="https://player.vimeo.com/video/784611432?h=00a8011316&amp;autopause=1&amp;autoplay=1&amp;loop=1&amp;muted=1" 
+                id="showreel-video"
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture" 
+                allowfullscreen 
+                style="max-height: 950px;"
+                title="iscte_online_master_v4 (1440p).mp4">
+            </iframe>
+            <!-- 
             <video 
                 autoplay loop muted
                 class="ratio ratio-16x9" 
                 src="videos/showreelSample.mp4" 
                 type="video/mp4" 
                 poster="images/frame-capture.PNG"
-                ></video>
+                >
+            </video> -->
         </div>
-    <!-- START Jumbotron Showreel2 with hover effect  -->
-    <!-- 
-    <header class="container-fluid bg-black m-auto my-0">
-        <div class="row w-100 m-0 bg-black">
-            <video id="showreel2" class="hover-to-play w-100 p-0" src="./videos/showreelSample.mp4" type="video/mp4" loop></video>
-        </div>
-    </header>  
-    --> 
-    <!-- END Jumbotron Showreel2 with hover effect -->
     </section> 
     <!-- END Showreel -->
 
@@ -341,25 +343,96 @@
     <section class="container-fluid navContent" id="body-focus-puller">
         <div class="row p-0">
             
-            <!-- START image triggering modal -->
+            <!-- START image triggering modal ReininhoVideo -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#reininhoVideo">
+                    <img src="images/frame-reininhoVideo.png" alt="Frame from Reininho Video"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>Reininho sem cerimónias <br>
+                            no Palácio Chiado</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="reininhoVideo" tabindex="-1" aria-labelledby="reininhoVideo" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784601408?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"  
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Reininho sem cerimónias no Palácio Chiado">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>Reininho sem cerimónias no Palácio Chiado</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal ReininhoVideo -->
+
+            <!-- START image triggering modal terrasComporta -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#terrasComporta">
+                    <img src="images/frame-terrasComporta2.png" alt="Frame from Terras da Comporta"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>Terras da Comporta<br>
+                            nature made</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="terrasComporta" tabindex="-1" aria-labelledby="terrasComporta" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784602416?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"  
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Terras da Comporta - nature made">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>Terras da Comporta - nature made</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal terrasComporta -->
+            
+            <!-- START image triggering modal ducatiVideo -->
             <div class="col-12 col-md-6 col-lg-4 px-0">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#ducatiVideo">
-                    <img src="images/frame-ducati.png" alt="Frame poster example"/>
+                    <img src="images/frame-ducati.png" alt="Frame from Ducati Video"/>
                     <div class="d-flex flex-column justify-content-center text-center text-white">
-                        <h4>NEW DUCATI PANIGALE V4 R</h4>
-                        <h5>This is Rancing</h5>
+                        <h5>New Ducati Panigale V4 R<br>
+                            This is Rancing
+                        </h5>
                     </div>
                 </div>
             </div>
             <div class="modal fade" id="ducatiVideo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl modal-dialog-centered">
-                    <div class="modal-content bg-light">
+                    <div class="modal-content bg-transparent text-white">
                         <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div class="modal-body p-0">
                             <div class="ratio ratio-16x9">
                                 <iframe 
-                                    src="https://player.vimeo.com/video/783723648?h=783723648&amp;badge=0&amp;autoplay=0&loop=1&autopause=1&amp;player_id=0&amp;app_id=58479" 
-                                    frameborder="0"  
+                                    src="https://player.vimeo.com/video/783723648?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479"
+                                    frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
                                     allowfullscreen 
@@ -367,17 +440,530 @@
                                 </iframe>
                             </div>
                             <div class="p-3">
-                                <h4>NEW DUCATI PANIGALE V4 R</h4>
-                                <h5>This is Rancing</h5>
+                                <h5>New Ducati Panigale V4 R - This is Rancing</h5>
                                 <p>
-                                    Producer:
+                                    Focus Puller: Rodrigo Albuquerque
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- END image triggering modal -->
+            <!-- END image triggering modal ducatiVideo -->
+
+            <!-- START image triggering modal barbaraTelepizza -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#barbaraTelepizza">
+                    <img src="images/frame-telepizzaBarbara.png" alt="Frame from Barbara e a Telepizza"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>A Bárbara e a Telepizza<br>
+                            partilham segredos</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="barbaraTelepizza" tabindex="-1" aria-labelledby="barbaraTelepizza" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784602479?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"  
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="A Bárbara e a Telepizza partilham segredos.">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>A Bárbara e a Telepizza partilham segredos.</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal barbaraTelepizza -->
+
+            <!-- START image triggering modal NobreVegalia-->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#NobreVegalia">
+                    <img src="images/frame-nobreVegalia.png" alt="Frame from Nobre Vegalia Salsichas Vegwurst"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>Nobre Vegalia<br> 
+                            Salsichas Vegwurst<br>
+                            Atreve-te a provar!</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="NobreVegalia" tabindex="-1" aria-labelledby="NobreVegalia" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784602605?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0" 
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Nobre Vegalia  Salsichas Vegwurst  Atreve-te a provar!">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>Nobre Vegalia - Salsichas Vegwurst - Atreve-te a provar!</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal NobreVegalia -->
+
+            <!-- START image triggering modal marizaVideoclip -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#marizaVideoclip">
+                    <img src="images/frame-marizaVideoclip.png" alt="Frame from Mariza - Lágrima Official Music Video"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>Mariza - Lágrima<br> 
+                            [Official Music Video]
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="marizaVideoclip" tabindex="-1" aria-labelledby="marizaVideoclip" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784602761?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="MARIZA - Lágrima [Official Music Video]">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>Mariza - Lágrima [Official Music Video]</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal marizaVideoclip -->
+
+            <!-- START image triggering modal beraVideoclip -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#beraVideoclip">
+                    <img src="images/frame-beraVideoclip.png" alt="Frame from B.E.R.A - QUERO MAIS music video"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>
+                            B.E.R.A<br> 
+                            QUERO MAIS
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="beraVideoclip" tabindex="-1" aria-labelledby="beraVideoclip" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784606252?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="B.E.R.A - QUERO MAIS">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>B.E.R.A - QUERO MAIS</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal beraVideoclip -->
+
+            <!-- START image triggering modal ikeaVideo -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#ikeaVideo">
+                    <img src="images/frame-ikeaVideo.png" alt="Frame from ikeaVideo"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>
+                            Venham sentir-se em casa<br> 
+                            IKEA Portugal
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="ikeaVideo" tabindex="-1" aria-labelledby="ikeaVideo" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784606414?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Venham sentir-se em casa  IKEA Portugal">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>Venham sentir-se em casa - IKEA Portugal</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal ikeaVideo -->
+
+            <!-- START image triggering modal tranquilidade -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#tranquilidade">
+                    <img src="images/frame-tranquilidade.png" alt="Frame from tranquilidade"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>
+                            Tranquilidade<br> 
+                            Investimento Protegido
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="tranquilidade" tabindex="-1" aria-labelledby="tranquilidade" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784606460?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Tranquilidade Investimento Protegido">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>Tranquilidade Investimento Protegido</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal tranquilidade -->
+
+            <!-- START image triggering modal ventoNorte -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#ventoNorte">
+                    <img src="images/frame-ventoNorte.png" alt="Frame from ventoNorte"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>
+                            Vento Norte<br> 
+                            estreia brevemente na RTP1
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="ventoNorte" tabindex="-1" aria-labelledby="ventoNorte" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784606547?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Vento Norte estreia brevemente na RTP1">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>Vento Norte estreia brevemente na RTP1</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal ventoNorte -->
+
+            <!-- START image triggering modal lonerXprofJam -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#lonerXprofJam">
+                    <img src="images/frame-lonerXprofJam.png" alt="Frame from lonerXprofJam"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>
+                            LON3R JOHNY X ProfJam<br> 
+                            HALLYWUD
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="lonerXprofJam" tabindex="-1" aria-labelledby="lonerXprofJam" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784606612?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="LON3R JOHNY &amp;times; ProfJam - HALLYWUD">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>LON3R JOHNY X ProfJam - HALLYWUD</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal lonerXprofJam -->
+
+            <!-- START image triggering modal profJamXfernandoDaniel -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#profJamXfernandoDaniel">
+                    <img src="images/frame-profJamXfernandoDaniel.png" alt="Frame from profJamXfernandoDaniel"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>
+                            ProfJam x Fernando Daniel<br> 
+                            Suprior
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="profJamXfernandoDaniel" tabindex="-1" aria-labelledby="profJamXfernandoDaniel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784606671?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="ProfJam x Fernando Daniel - Suprior">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>ProfJam x Fernando Daniel - Suprior</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal profJamXfernandoDaniel -->
+
+            <!-- START image triggering modal perfComp -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#perfComp">
+                    <img src="images/frame-perfComp.png" alt="Frame from perfComp"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>
+                            Perfumes & Companhia<br> 
+                            Este Natal Surpreenda!
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="perfComp" tabindex="-1" aria-labelledby="perfComp" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784606868?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Perfumes &amp;amp; Companhia -  Este Natal Surpreenda!">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>Perfumes & Companhia -  Este Natal Surpreenda!</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal perfComp -->
+
+            <!-- START image triggering modal meoCare -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#meoCare">
+                    <img src="images/frame-meoCare.png" alt="Frame from meoCare"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>
+                            MEO Care<br> 
+                            Queria ou Care
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="meoCare" tabindex="-1" aria-labelledby="meoCare" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784606932?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="MEO Care - Queria ou Care">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>MEO Care - Queria ou Care</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal meoCare -->
+
+            <!-- START image triggering modal afogamentosGNR -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#afogamentosGNR">
+                    <img src="images/frame-afogamentosGNR.png" alt="Frame from afogamentosGNR"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>
+                            Campanha de Prevenção de Afogamentos <br>
+                            de Crianças e Jovens 2022<br>
+                            APSI e GNR
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="afogamentosGNR" tabindex="-1" aria-labelledby="afogamentosGNR" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784607020?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Campanha de Preven&amp;ccedil;&amp;atilde;o de Afogamentos de Crian&amp;ccedil;as e Jovens 2022 - APSI e GNR">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>Campanha de Prevenção de Afogamentos de Crianças e Jovens 2022 - APSI e GNR</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal afogamentosGNR -->
+
+            <!-- START image triggering modal logoVideo -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#logoVideo">
+                    <img src="images/frame-logoVideo.png" alt="Frame from logoVideo"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>
+                            É melhor apostar na LOGO
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="logoVideo" tabindex="-1" aria-labelledby="logoVideo" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784611180?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="&amp;Eacute; melhor apostar na LOGO  30% de desconto em todos os seguros at&amp;eacute; 3009">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>É melhor apostar na LOGO - 30% de desconto em todos os seguros até 3009</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal logoVideo -->
+
+            <!-- START image triggering modal montepioEleicoes -->
+            <div class="col-12 col-md-6 col-lg-4 px-0">
+                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#montepioEleicoes">
+                    <img src="images/frame-montepioEleicoes.png" alt="Frame from montepioEleicoes"/>
+                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                        <h5>
+                            Eleições Órgãos Associativos 2025<br>
+                            Montepio
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="montepioEleicoes" tabindex="-1" aria-labelledby="montepioEleicoes" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content  bg-transparent text-white">
+                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/784611263?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    frameborder="0"
+                                    class="modal-video"
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen 
+                                    title="Elei&amp;ccedil;&amp;otilde;es &amp;Oacute;rg&amp;atilde;os Associativos 2225">
+                                </iframe>
+                            </div>
+                            <div class="p-3">
+                                <h5>Eleições Órgãos Associativos 2025</h5>
+                                <p>Focus Puller: Rodrigo Albuquerque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END image triggering modal montepioEleicoes -->
             
         </div>
     </section>
