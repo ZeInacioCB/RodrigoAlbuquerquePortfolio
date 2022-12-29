@@ -17,7 +17,10 @@ a:hover {
     transition: color .25s ease-in-out;
 }
 
-/* Try different approach for the change of pages with interactivity */
+.letter-spacing {
+    letter-spacing: 3px;
+}
+
 #body-gimbal, #body-focus-puller, #body-about {
     display: none;
 }
@@ -28,16 +31,19 @@ a:hover {
     width: auto;
 }
 
-/* main home body background image */
-.custom-bg-img {
-    background-image: url("../images/main2.jpg"); 
+/* about section */
+.custom-bg-img { /* background image */
+    background-image: url("../images/about-rod.jpeg"); 
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    min-height: 200px;
+    min-height: 500px;
     height: 100%;
     width: 100%;
     max-width: 1000px; /* override Bootstrap max-width of 540px for md breakpoint */
+}
+.text-justify { /* justifiy text */
+    text-align: justify;
 }
 
 /* custom footer font-size that needed to be smaller */
