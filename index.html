@@ -25,8 +25,7 @@
             id="logo-header"
             onclick="openSection(event, 'showreel')">
             <h2 class="mb-0 fw-light letter-spacing">
-                Rodrigo <br>
-                Albuquerque
+                Rodrigo Albuquerque
             </h2>
             <!--<span class="navbar-text mt-0 d-none d-sm-block">Gimbal | Camera Operator | Focus Puller</span> --> 
         </a>
@@ -106,8 +105,8 @@
 
     <!-- START About Section  -->
     <section class="container-fluid pb-2 pb-lg-4 bg-light navContent" id="body-about">
-        <div class="row flex-column-reverse flex-md-row border-bottom bg-light" id="about">
-            <div class="col-12 col-md-6 my-2 my-md-0 my-lg-3 px-3 px-lg-5">
+        <div class="row flex-column-reverse flex-md-row bg-light" id="about">
+            <div class="col-12 col-md-6 my-3 my-lg-4 px-3 px-lg-5">
                 <div class="container p-3 p-md-2 p-lg-5">
                     <h4 class="mb-4 letter-spacing">Gimbal Operator | Focus Puller</h4>
                     <p class="text-dark text-justify mb-3 mb-lg-5">
@@ -147,13 +146,13 @@
     <!-- END About Section -->
 
     <!-- START Gimbal Section  -->
-    <section class="container-fluid navContent" id="body-gimbal">
+    <section class="container-fluid navContent" id="body-gimbal" style="display: block;">
         <div class="row p-0">
             
             <!-- START image triggering modal isctePromo -->
             <div class="col-12 col-md-6 col-lg-4 px-0">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#isctePromo">
-                    <img src="images/frame-isctePromo.png" alt="Frame from ISCTE Video"/>
+                    <img src="./images/frame-isctePromo.png" alt="Frame from ISCTE Video">
                     <div class="d-flex flex-column justify-content-center text-center text-white">
                         <h5>ISCTE<br>
                             by Rodrigo Albuquerque </h5>
@@ -168,11 +167,12 @@
                             <div class="ratio ratio-16x9">
                                 <iframe 
                                     src="https://player.vimeo.com/video/784611432?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
-                                    frameborder="0"  
-                                    class="modal-video"
+                                    frameborder="0" 
+                                    class="modal-video" 
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
-                                    title="ISCTE promotional video by Rodrigo Albuquerque">
+                                    allowfullscreen="" 
+                                    title="ISCTE promotional video by Rodrigo Albuquerque" 
+                                    data-ready="true">
                                 </iframe>
                             </div>
                             <div class="p-3">
@@ -185,68 +185,30 @@
             </div>
             <!-- END image triggering modal isctePromo -->
             
-            <!-- START image triggering modal rodShowreel -->
-            <div class="col-12 col-md-6 col-lg-4 px-0">
-                <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#rodShowreel">
-                    <img src="images/frame-rodShowreel.png" alt="Frame from Rodrigo Albuquerque Showreel"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
-                        <h5>Cinematographer Reel<br>
-                            by Rodrigo Albuquerque </h5>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="rodShowreel" tabindex="-1" aria-labelledby="rodShowreel" aria-hidden="true">
-                <div class="modal-dialog modal-xl modal-dialog-centered">
-                    <div class="modal-content  bg-transparent text-white">
-                        <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <div class="modal-body p-0">
-                            <div class="ratio ratio-16x9">
-                                <iframe 
-                                    src="https://player.vimeo.com/video/289834615?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
-                                    frameborder="0"  
-                                    class="modal-video"
-                                    allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
-                                    title="Cinematographer Reel by Rodrigo Albuquerque">
-                                </iframe>
-                            </div>
-                            <div class="p-3">
-                                <h5>Cinematographer Reel by Rodrigo Albuquerque</h5>
-                                <p>
-                                    Gimbal Operator: Rodrigo Albuquerque<br>
-                                    Focus Puller: Rodrigo Albuquerque<br>
-                                    Editor: Rodrigo Albuquerque
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- END image triggering modal rodShowreel -->
-            
             <!-- START image triggering modal agirVideoclip -->
             <div class="col-12 col-md-6 col-lg-4 px-0">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#agirVideoclip">
-                    <img src="images/frame-agirVideoclip.png" alt="Frame from PICAS feat Agir videoclip"/>
+                    <img src="./images/frame-agirVideoclip.png" alt="Frame from PICAS feat Agir videoclip">
                     <div class="d-flex flex-column justify-content-center text-center text-white">
                         <h5>PICAS feat. Agir <br>
                             Volta para mim</h5>
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="agirVideoclip" tabindex="-1" aria-labelledby="agirVideoclip" aria-hidden="true">
+            <div class="modal fade" id="agirVideoclip" tabindex="-1" aria-labelledby="agirVideoclip" style="display: none;" aria-hidden="true">
                 <div class="modal-dialog modal-xl modal-dialog-centered">
                     <div class="modal-content  bg-transparent text-white">
                         <button type="button" class="btn-close btn-close-white custom-btn" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div class="modal-body p-0">
                             <div class="ratio ratio-16x9">
                                 <iframe 
-                                    src="https://player.vimeo.com/video/784828988?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
-                                    frameborder="0"  
-                                    class="modal-video"
+                                    src="https://player.vimeo.com/video/784828988?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479"
+                                    frameborder="0" 
+                                    class="modal-video" 
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
-                                    title="PICAS feat. Agir - Volta para mim">
+                                    allowfullscreen="" 
+                                    title="PICAS feat. Agir - Volta para mim" 
+                                    data-ready="true">
                                 </iframe>
                             </div>
                             <div class="p-3">
@@ -262,7 +224,7 @@
             <!-- START image triggering modal dianaLimaVideo -->
             <div class="col-12 col-md-6 col-lg-4 px-0">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#dianaLimaVideo">
-                    <img src="images/frame-dianaLimaVideo.png" alt="Frame from Diana Lima - Pés no Chão"/>
+                    <img src="./images/frame-dianaLimaVideo.png" alt="Frame from Diana Lima - Pés no Chão">
                     <div class="d-flex flex-column justify-content-center text-center text-white">
                         <h5>Diana Lima<br>
                             Pés no Chão</h5>
@@ -276,12 +238,13 @@
                         <div class="modal-body p-0">
                             <div class="ratio ratio-16x9">
                                 <iframe 
-                                    src="https://player.vimeo.com/video/784829226?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
-                                    frameborder="0"  
-                                    class="modal-video"
+                                    src="https://player.vimeo.com/video/784829226?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479"
+                                    frameborder="0" 
+                                    class="modal-video" 
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
-                                    title="Diana Lima - Pés no Chão [Official Music Video]">
+                                    allowfullscreen="" 
+                                    title="Diana Lima - Pés no Chão [Official Music Video]" 
+                                    data-ready="true">
                                 </iframe>
                             </div>
                             <div class="p-3">
@@ -297,7 +260,7 @@
             <!-- START image triggering modal turismoLisboa -->
             <div class="col-12 col-md-6 col-lg-4 px-0">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#turismoLisboa">
-                    <img src="images/frame-turismoLisboa.png" alt="Frame from Turismo de Lisboa"/>
+                    <img src="./images/frame-turismoLisboa.png" alt="Frame from Turismo de Lisboa">
                     <div class="d-flex flex-column justify-content-center text-center text-white">
                         <h5>
                             Turismo de Lisboa<br>
@@ -313,12 +276,13 @@
                         <div class="modal-body p-0">
                             <div class="ratio ratio-16x9">
                                 <iframe 
-                                    src="https://player.vimeo.com/video/784831717?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
-                                    frameborder="0"  
-                                    class="modal-video"
+                                    src="https://player.vimeo.com/video/784831717?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479"
+                                    frameborder="0" 
+                                    class="modal-video" 
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
-                                    title="Filme promocional de Lisboa">
+                                    allowfullscreen="" 
+                                    title="Filme promocional de Lisboa" 
+                                    data-ready="true">
                                 </iframe>
                             </div>
                             <div class="p-3">
@@ -334,7 +298,7 @@
             <!-- START image triggering modal oneWebPromo -->
             <div class="col-12 col-md-6 col-lg-4 px-0">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#oneWebPromo">
-                    <img src="images/frame-oneWebPromo.png" alt="Frame from One Web Promo"/>
+                    <img src="./images/frame-oneWebPromo.png" alt="Frame from One Web Promo">
                     <div class="d-flex flex-column justify-content-center text-center text-white">
                         <h5>
                             One Web Promo<br>
@@ -350,12 +314,13 @@
                         <div class="modal-body p-0">
                             <div class="ratio ratio-16x9">
                                 <iframe 
-                                    src="https://player.vimeo.com/video/784829341?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
-                                    frameborder="0"  
-                                    class="modal-video"
+                                    src="https://player.vimeo.com/video/784829341?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479"
+                                    frameborder="0" 
+                                    class="modal-video" 
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
-                                    title="One Web Directors Cut Promo">
+                                    allowfullscreen="" 
+                                    title="One Web Directors Cut Promo" 
+                                    data-ready="true">
                                 </iframe>
                             </div>
                             <div class="p-3">
@@ -1017,7 +982,7 @@
                 <h6>Contact</h6>
                 <p>
                     Rodrigo Albuquerque<br>
-                    Lisbon, Portugal<br>
+                    Lisboa, Portugal<br>
                     +351 968 377 019<br>
                 </p>
             </div>
