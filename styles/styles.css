@@ -88,10 +88,13 @@ a:hover {
 
 
  /* media queries to adjust certain behaviours in certain breakpoints */
- @media only screen and (max-width: 400px) {
+ @media only screen and (max-width: 390px) {
     /* selecting the header tag */
+    nav a.navbar-brand {
+        margin-right: 8px;
+    }
     nav a * {
-        font-size: 1.325rem;
-        letter-spacing: 2px;
+        font-size: calc(1.2rem + .6vw);
+        letter-spacing: 2px !important;
     }
  }
