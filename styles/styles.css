@@ -87,7 +87,7 @@ a:hover {
  }
 
 
- /* media queries to adjust certain behaviours */
+ /* media queries to adjust certain behaviours in certain breakpoints */
  @media only screen and (max-width: 400px) {
     /* selecting the header tag */
     nav a * {
