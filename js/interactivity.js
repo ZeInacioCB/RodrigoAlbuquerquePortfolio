@@ -24,6 +24,10 @@ function openSection(e, sectionName) {
   e.target.classList.add("active");
 }
 
+function hideUpperFooter() {
+  
+}
+
 // Toggle between unmute and mute when clicking in main video
 // let video = document.querySelector("section#showreel video");
 // video.onclick = () => video.muted ? video.muted = false : video.muted = true;

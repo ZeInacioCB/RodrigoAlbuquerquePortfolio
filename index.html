@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rodrigo Albuquerque</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon-RA2.ico">
+    <link rel="icon" type="image/x-icon" href="./favicons/favicon-RA2.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="./js/interactivity.js" defer></script>
@@ -17,7 +17,7 @@
 <body class="bg-black">
 
     <!-- START Navbar & Header -->
-    <nav class="navbar navbar-expand-lg navbar-dark p-2 pb-4 p-md-4">
+    <nav class="navbar navbar-expand-lg navbar-dark p-1 py-3 p-md-4">
         <!-- START Left elements -->
         <a 
             class="navbar-brand d-flex flex-column my-2 ms-3 my-lg-3 ms-lg-5" 
@@ -64,7 +64,7 @@
                 <li class="nav-item d-inline d-lg-none me-lg-2 d-xl-inline">
                     <a class="nav-link" href="#" onclick="openSection(event, 'showreel')">
                         <img
-                        src="./images/favicon-32x32.png"
+                        src="./favicons/favicon-32x32.png"
                         height="32"
                         alt="Portrait of cinematographer Rodrigo Albuquerque"
                         loading="lazy"
@@ -78,8 +78,16 @@
     <!-- END Navbar & Header -->
 
     <!-- START Showreel -->
-    <section class="container-fluid m-auto my-0 mb-5 navContent" id="showreel">
-        <div class="row ratio ratio-16x9 px-0 px-lg-4">
+    <section class="container-fluid p-0 m-auto my-0 mb-5 px-xxl-4 navContent" id="showreel">
+        <div class="row mx-1 mx-lg-5 mt-3"> <!-- add class ratio ratio-16x9 in case all goes wrong -->
+            <video 
+                autoplay loop muted
+                src="./videos/rodrigoAlb-showreel.mp4" 
+                type="video/mp4" 
+                poster="images/frame-isctePromo.png"
+                >
+            </video> 
+            <!--
             <iframe 
                 src="https://player.vimeo.com/video/784611432?h=00a8011316&amp;autopause=1&amp;autoplay=1&amp;loop=1&amp;muted=1" 
                 id="showreel-video"
@@ -88,38 +96,32 @@
                 allowfullscreen 
                 style="max-height: 950px;"
                 title="iscte_online_master_v4 (1440p).mp4">
-            </iframe>
-            <!-- 
-            <video 
-                autoplay loop muted
-                class="ratio ratio-16x9" 
-                src="videos/showreelSample.mp4" 
-                type="video/mp4" 
-                poster="images/frame-capture.PNG"
-                >
-            </video> -->
+            </iframe> 
+            -->
         </div>
     </section> 
     <!-- END Showreel -->
 
     <!-- START About Section  -->
     <section class="container-fluid p-0 navContent" id="body-about">
-        <div class="row flex-column-reverse flex-md-row text-white m-0" id="about">
-            <div class="col-12 col-md-6 my-4 my-lg-5 px-4 px-lg-5">
-                <div class="container p-3 p-md-2 p-lg-5 text-white">
-                    <h4 class="mb-4 letter-spacing">Gimbal Operator | Focus Puller</h4>
-                    <p class="text-justify mb-3 mb-lg-5">
-                        I've been working in the industry for more than 5 years and I have started my career has a 2º assistant camera working on all kind of sets, from commercials to features. <br>
-                        Have been a focus puller for 3 years and I have enjoyed every moment of it. <br>
-                        But my biggest love has always been camera operating! 
-                        With that in mind, and after doing some jobs with rented gimbals, I finally bought my movi pro and since then I'm living the dream. <br>
-                        If you are reading this, probably you have a challenge for me and I am the one! <br>
-                        Bring it on. Together we will make it happen.
-                    </p>
-                </div>
+        <div class="row flex-column flex-md-row justify-content-around mx-5 py-5 my-5" id="about">
+            <div class="col-12 col-md-5 px-4 px-lg-5">
+                <h4 class="mb-4 text-white">Gimbal Operator | Focus Puller</h4>
+                <p class="text-justify text-white-50">
+                    Working in the industry since 2017 when I graduated from Lusófona University. 
+                    Started my career as a 2º assistant camera working on all kind of sets from commercials to features. 
+                </p>
+                <p class="text-justify text-white-50">
+                    Have been a focus puller since 2020 enjoying every moment of it but my biggest love has always been camera operating. 
+                    With that in mind and after doing some jobs with rented gimbals, I finally bought my Movi Pro and since then I’m living the dream.
+                </p>
+                <p class="text-justify text-white-50">
+                    If you are reading this maybe it’s because you have a challenge for me and thinking if I’m the one. 
+                    Bring it on ! Together we will make it happen.
+                </p>
             </div>
-            <div class="col-12 col-md-6 p-0">                
-                <h5 class="text-white-50">Equipment:</h5>
+            <div class="col-12 col-md-5 px-4 px-lg-5">                
+                <h4 class="mb-4 text-white">Equipment:</h4>
                 <p class="text-white-50">
                     Movi Pro with Ignite Digi upgrades<br>
                     Ready Rig with Pro Arms upgrade<br>
@@ -127,7 +129,7 @@
                     Mimic with Handle Bars<br>
                     Smallhd Indie 7<br>
                     Freefly Ninja Star Adapter Plate<br>
-                    Nucleus M with two motors<br>
+                    Nucleus M with two Motors<br>
                     Adicam Cart<br>
                     C-stand<br>
                     Cine Saddle<br>

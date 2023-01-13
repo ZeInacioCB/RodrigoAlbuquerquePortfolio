@@ -85,3 +85,13 @@ a:hover {
 .modal-backdrop {
     opacity: .85 !important;
  }
+
+
+ /* media queries to adjust certain behaviours */
+ @media only screen and (max-width: 400px) {
+    /* selecting the header tag */
+    nav a * {
+        font-size: 1.325rem;
+        letter-spacing: 2px;
+    }
+ }
