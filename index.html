@@ -12,6 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/grid-hover-overlay.css">
+    <link rel="stylesheet" href="./styles/media-queries.css">
     <script src="https://kit.fontawesome.com/2fc8e75836.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-black">
@@ -47,26 +49,26 @@
         <div class="collapse navbar-collapse justify-content-end mx-0" id="navbarContent">
             <ul class="navbar-nav m-0 ps-3 align-items-xl-center fs-5">
                 <li class="nav-item me-0 me-lg-2">
-                    <a class="nav-link navLinkChange" href="#" onclick="openSection(event, 'body-gimbal')">
+                    <a class="nav-link navLinkChange" href="#" onclick="openSection(event, 'body-gimbal');  hideFooterInfo(false)">
                         Gimbal
                     </a>
                 </li>
                 <li class="nav-item me-0 me-lg-2">
-                    <a class="nav-link navLinkChange" href="#" onclick="openSection(event, 'body-focus-puller')">
+                    <a class="nav-link navLinkChange" href="#" onclick="openSection(event, 'body-focus-puller'); hideFooterInfo(false)">
                         Focus Puller
                     </a>
                 </li>
                 <li class="nav-item me-0 me-lg-2">
-                    <a class="nav-link navLinkChange" href="#" onclick="openSection(event, 'body-about')">
+                    <a class="nav-link navLinkChange" href="#" onclick="openSection(event, 'body-about'); hideFooterInfo(true)">
                         About
                     </a>
                 </li>
                 <li class="nav-item d-inline d-lg-none me-lg-2 d-xl-inline">
-                    <a class="nav-link" href="#" onclick="openSection(event, 'showreel')">
+                    <a class="nav-link" href="#" onclick="openSection(event, 'showreel'); hideFooterInfo(false)">
                         <img
                         src="./favicons/favicon-32x32.png"
                         height="32"
-                        alt="Portrait of cinematographer Rodrigo Albuquerque"
+                        alt="Rodrigo Albuquerque RA Logo"
                         loading="lazy"
                         />
                     </a>
@@ -81,7 +83,7 @@
     <section class="container-fluid p-0 m-auto my-0 mb-5 px-xxl-4 navContent" id="showreel">
         <div class="row mx-1 mx-lg-5 mt-3"> <!-- add class ratio ratio-16x9 in case all goes wrong -->
             <video 
-                autoplay loop muted
+                autoplay loop muted controls
                 src="./videos/rodrigoAlb-showreel.mp4" 
                 type="video/mp4" 
                 poster="images/frame-isctePromo.png"
@@ -147,15 +149,15 @@
 
     <!-- START Gimbal Section  -->
     <section class="container-fluid navContent" id="body-gimbal">
-        <div class="row p-0 px-3">
+        <div class="row p-0 px-2 px-md-3">
             
             <!-- START image triggering modal isctePromo -->
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#isctePromo">
                     <img src="./images/frame-isctePromo.png" alt="Frame from ISCTE Video">
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>ISCTE 50</h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -191,9 +193,9 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#turismoLisboa">
                     <img src="./images/frame-turismoLisboa.png" alt="Frame from Turismo de Lisboa">
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>Visit Lisboa</h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -229,12 +231,12 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#agirVideoclip">
                     <img src="./images/frame-agirVideoclip.png" alt="Frame from PICAS feat Agir videoclip">
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>
-                            PICAS feat. Agir <br>
+                            PICAS ft. Agir <br>
                             - Volta para mim -
                         </h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Videoclip
                         </p>
                     </div>
@@ -270,12 +272,12 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#dianaLimaVideo">
                     <img src="./images/frame-dianaLimaVideo.png" alt="Frame from Diana Lima - Pés no Chão">
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>
                             Diana Lima<br>
                             - Pés no Chão -
                         </h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Videoclip
                         </p>
                     </div>
@@ -311,9 +313,9 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#oneWebPromo">
                     <img src="./images/frame-oneWebPromo.png" alt="Frame from One Web Promo">
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>ONE</h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -351,15 +353,15 @@
 
     <!-- START Focus Puller Section  -->
     <section class="container-fluid navContent" id="body-focus-puller">
-        <div class="row p-0 px-3">
+        <div class="row p-0 px-2 px-md-3">
             
             <!-- START image triggering modal ducatiVideo -->
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#ducatiVideo">
                     <img src="images/frame-ducati.png" alt="Frame from Ducati Video"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>New Ducati Panigale V4 R</h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -396,12 +398,12 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#afogamentosGNR">
                     <img src="images/frame-afogamentosGNR.png" alt="Frame from afogamentosGNR"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>
                             Drowning Prevention Campaign<br>
                             APSI
                         </h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -436,12 +438,12 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#lonerXprofJam">
                     <img src="images/frame-lonerXprofJam.png" alt="Frame from lonerXprofJam"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>
                             LON3R JOHNY X ProfJam<br> 
                             - HALLYWUD -
                         </h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Videoclip
                         </p>
                     </div>
@@ -454,7 +456,7 @@
                         <div class="modal-body p-0">
                             <div class="ratio ratio-16x9">
                                 <iframe 
-                                    src="https://player.vimeo.com/video/784606612?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
+                                    src="https://player.vimeo.com/video/784606612?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;app_id=58479" 
                                     frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
@@ -476,11 +478,11 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#perfComp">
                     <img src="images/frame-perfComp.png" alt="Frame from perfComp"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>
                             Perfumes & Companhia
                         </h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -515,11 +517,11 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#meoCare">
                     <img src="images/frame-meoCare.png" alt="Frame from meoCare"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>
                             MEO Care
                         </h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -554,9 +556,9 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#reininhoVideo">
                     <img src="images/frame-reininhoVideo.png" alt="Frame from Reininho Video"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>Palácio Chiado</h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -591,12 +593,12 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#marizaVideoclip">
                     <img src="images/frame-marizaVideoclip.png" alt="Frame from Mariza - Lágrima Official Music Video"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>
                             Mariza <br>
                             - Lágrima -
                         </h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Videoclip
                         </p>
                     </div>
@@ -631,9 +633,9 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#terrasComporta">
                     <img src="images/frame-terrasComporta2.png" alt="Frame from Terras da Comporta"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>Terras da Comporta</h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -668,9 +670,9 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#barbaraTelepizza">
                     <img src="images/frame-telepizzaBarbara.png" alt="Frame from Barbara e a Telepizza"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>Telepizza</h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -705,9 +707,9 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#montepioEleicoes">
                     <img src="images/frame-montepioEleicoes.png" alt="Frame from montepioEleicoes"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>AM Montepio</h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -742,9 +744,9 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#logoVideo">
                     <img src="images/frame-logoVideo.png" alt="Frame from logoVideo"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>LOGO</h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -779,12 +781,12 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#profJamXfernandoDaniel">
                     <img src="images/frame-profJamXfernandoDaniel.png" alt="Frame from profJamXfernandoDaniel"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>
                             ProfJam x Fernando Daniel<br> 
                             - Suprior -
                         </h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Videoclip
                         </p>
                     </div>
@@ -819,9 +821,9 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#NobreVegalia">
                     <img src="images/frame-nobreVegalia.png" alt="Frame from Nobre Vegalia Salsichas Vegwurst"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>Nobre Vegalia</h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -856,12 +858,12 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#beraVideoclip">
                     <img src="images/frame-beraVideoclip.png" alt="Frame from B.E.R.A - QUERO MAIS music video"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>
                             B.E.R.A<br> 
                             - QUERO MAIS -
                         </h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -896,9 +898,9 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#ikeaVideo">
                     <img src="images/frame-ikeaVideo.png" alt="Frame from ikeaVideo"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>IKEA Portugal</h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -933,9 +935,9 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#tranquilidade">
                     <img src="images/frame-tranquilidade.png" alt="Frame from tranquilidade"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>Tranquilidade</h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Commercial
                         </p>
                     </div>
@@ -970,12 +972,12 @@
             <div class="col-12 col-md-6 col-lg-4 p-3">
                 <div class="ratio ratio-16x9 custom-img-overlay" data-bs-toggle="modal" data-bs-target="#ventoNorte">
                     <img src="images/frame-ventoNorte.png" alt="Frame from ventoNorte"/>
-                    <div class="d-flex flex-column justify-content-center text-center text-white">
+                    <div class="text-center text-white">
                         <h5>
                             Vento Norte <br>
                             - Season 1 -
                         </h5>
-                        <p class="position-absolute bottom-0 start-50 translate-middle-x text-white-50 fw-lighter">
+                        <p class="text-white-50 fw-lighter">
                             Fiction
                         </p>
                     </div>
@@ -1012,7 +1014,7 @@
 
     <!-- START Footer Section  -->
     <footer class="container-fluid text-white pt-4 pt-md-5">
-        <div class="row flex-column flex-md-row justify-content-center justify-content-md-around">
+        <div class="row flex-column flex-md-row justify-content-center justify-content-md-around" id="footer-info">
             <div class="d-none d-md-block col-md-6 col-lg-4 ps-md-5 pb-2">
                 <h6>About</h6>
                 <p class="text-white-50">
@@ -1056,9 +1058,9 @@
             <div class="col">
                 <span class="text-white-50 custom-text-footer">
                     Copyright © 2022 
-                    <span><a href="#" onclick="openSection(event, 'showreel')">Rodrigo Albuquerque</a></span> | 
-                    <span><a href="#" onclick="openSection(event, 'body-gimbal')">Gimbal</a></span> | 
-                    <span><a href="#" onclick="openSection(event, 'body-focus-puller')">Focus Puller</a></span> 
+                    <span><a href="#" onclick="openSection(event, 'showreel');  hideFooterInfo(false)">Rodrigo Albuquerque</a></span> | 
+                    <span><a href="#" onclick="openSection(event, 'body-gimbal');  hideFooterInfo(false)">Gimbal</a></span> | 
+                    <span><a href="#" onclick="openSection(event, 'body-focus-puller');  hideFooterInfo(false)">Focus Puller</a></span> 
                 </span>
             </div>
         </div>

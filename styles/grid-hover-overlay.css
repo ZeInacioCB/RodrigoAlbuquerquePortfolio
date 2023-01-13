@@ -1,0 +1,101 @@
+/* Custom grid, image, hover overlay effect and modal button */
+.custom-btn {
+    position:absolute;
+    right:0;
+    top:-50px;
+    z-index:999;
+    font-size:1.5rem;
+}
+
+.custom-img-overlay { 
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+.custom-img-overlay div {
+    z-index: 10;
+    /*border-top: 3rem solid rgba(0, 0, 0);*/
+    /*border-bottom: 3rem solid rgba(0, 0, 0);*/
+    line-height: 1.1em;
+    opacity: 0;
+    letter-spacing: 1px;
+}
+.custom-img-overlay * {
+    transition: all 500ms ease;
+}
+.custom-img-overlay:hover > img {
+    opacity: 0.40;
+}
+.custom-img-overlay:hover div {
+    opacity: 1;
+}
+.modal-backdrop {
+    opacity: .85 !important;
+ }
+.custom-img-overlay div h1,
+.custom-img-overlay div h2,
+.custom-img-overlay div h3,
+.custom-img-overlay div h4,
+.custom-img-overlay div h5,
+.custom-img-overlay div h6 {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        line-height: 1.1em;
+    }
+ /* position-absolute bottom-0 start-50 translate-middle-x */
+.custom-img-overlay div p {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+@media only screen and (max-width: 768px) {
+    .custom-img-overlay { 
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+        width: 100%;
+    }
+    .custom-img-overlay div {
+        opacity: 1;
+        z-index: 10;
+    }
+    .custom-img-overlay div h1,
+    .custom-img-overlay div h2,
+    .custom-img-overlay div h3,
+    .custom-img-overlay div h4,
+    .custom-img-overlay div h5,
+    .custom-img-overlay div h6 {
+        position: absolute;
+        bottom: 1%;
+        left: 2%;
+        transform: translate(0%, 0%);
+        text-align: start;
+        line-height: 1.1em;
+        font-size: calc(0.75rem + 1.6vw);
+    }
+    .custom-img-overlay div p {
+        right: 2%;
+        bottom: 1%;
+        transform: translate(0%, 0%);
+        text-align: end;
+        line-height: 1.1em;
+        font-size: calc(0.5rem + 1.2vw);
+        margin-bottom: 0.5rem;
+    }
+    .custom-img-overlay * {
+        transition: all 500ms ease;
+    }
+    .custom-img-overlay > img {
+        opacity: 0.75;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .custom-img-overlay div p {
+        display: none;
+    }
+}

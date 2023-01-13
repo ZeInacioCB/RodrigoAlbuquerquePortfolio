@@ -1,0 +1,27 @@
+/* media queries to adjust certain behaviours in certain breakpoints */
+
+/* adapt the Rodrigo Albuquerque navbar brand to adjust smaller screen sizes without wraping the toggler button in a new line */
+@media only screen and (max-width: 390px) {
+/* selecting the header tag */
+nav a.navbar-brand {
+    margin-right: 8px;
+}
+nav a * {
+    font-size: calc(1.2rem + .6vw);
+    letter-spacing: 2px !important;
+}
+}
+
+/* adjusting side paddings so that the video better fits bigger screens. Add more media queries in case it is necessary */
+@media only screen and (min-width: 1600px) {
+    #showreel {
+        padding-left: 4rem !important;
+        padding-right: 4rem !important;
+    }
+}
+@media only screen and (min-width: 1800px) {
+    #showreel {
+        padding-left: 8rem !important;
+        padding-right: 8rem !important;
+    }
+}

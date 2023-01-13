@@ -4,6 +4,11 @@ for (let i = 0; i < clip.length; i++) { clip[i].addEventListener("mouseenter", f
   }); clip[i].addEventListener("mouseout", function (e) { clip[i].pause(); }); 
 }
 
+// Main showreel Video manipulations: toggle between unmute and mute when clicking in main video
+let video = document.querySelector("section#showreel video");
+video.onclick = () => video.muted ? video.muted = false : video.muted = true;
+video.addEventListener("mouseenter", () => video.muted = false, { once: true });
+
 // navigate the site - reveals and hides different sections
 function openSection(e, sectionName) {
 
@@ -22,27 +27,18 @@ function openSection(e, sectionName) {
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(sectionName).style.display = "block";
   e.target.classList.add("active");
-}
 
-function hideUpperFooter() {
-  
-}
+  // Extra detail for this project to pause and play the showreel video when changing pages
+  if(sectionName === "showreel") video.play();
+  else video.pause();
 
-// Toggle between unmute and mute when clicking in main video
-// let video = document.querySelector("section#showreel video");
-// video.onclick = () => video.muted ? video.muted = false : video.muted = true;
-
-// Manipulating video sound to improve UX
-/*
-let showreelVideo = document.getElementById("showreel-video");
-let unmuteHanlder = function() {
-  let mutedSrc = showreelVideo.src;
-  let unmutedSrc = mutedSrc.replace("muted=1", "muted=0");
-  showreelVideo.src = unmutedSrc;
-  showreelVideo.removeEventListener('mouseenter', unmuteHanlder);
 }
-showreelVideo.addEventListener('mouseenter', unmuteHanlder);
-*/
+// functioon to hide and show footer main info. Used to hide info when in About section
+function hideFooterInfo(hide) {
+  let upperFooter = document.getElementById("footer-info");
+  if(hide) upperFooter.style.display = "none"; 
+  else upperFooter.style.display = "flex";
+};
 
 // Adding event handlers to modals and iframes so that the videos starts and stops when  function to stop and play video on ALL modals
 function setModalToAutoplayAndPause() {
@@ -73,3 +69,23 @@ function setModalToAutoplayAndPause() {
 } 
 
 setModalToAutoplayAndPause();
+
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+// Experiences
+
+// Manipulating video sound to improve UX
+/*
+let showreelVideo = document.getElementById("showreel-video");
+let unmuteHanlder = function() {
+  let mutedSrc = showreelVideo.src;
+  let unmutedSrc = mutedSrc.replace("muted=1", "muted=0");
+  showreelVideo.src = unmutedSrc;
+  showreelVideo.removeEventListener('mouseenter', unmuteHanlder);
+}
+showreelVideo.addEventListener('mouseenter', unmuteHanlder);
+*/
