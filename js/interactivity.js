@@ -32,7 +32,12 @@ function openSection(e, sectionName) {
   if(sectionName === "showreel") video.play();
   else video.pause();
 
+  // extra detail to incorporate hideFooterInfo and see if it works
+  if(sectionName === "body-about") hideFooterInfo(true);
+  else hideFooterInfo(false);
+
 }
+
 // functioon to hide and show footer main info. Used to hide info when in About section
 function hideFooterInfo(hide) {
   let upperFooter = document.getElementById("footer-info");
