@@ -40,9 +40,17 @@ function openSection(e, sectionName) {
 
 // functioon to hide and show footer main info. Used to hide info when in About section
 function hideFooterInfo(hide) {
-  let upperFooter = document.getElementById("footer-info");
-  if(hide) upperFooter.style.display = "none"; 
-  else upperFooter.style.display = "flex";
+  let footerMenu = document.getElementById("footer-info-menu");
+  let footerAbout = document.getElementById("footer-info-about");
+  console.log(footerMenu);
+  console.log(footerAbout);
+  if(hide) {
+    footerMenu.style.display = "none"; 
+    footerAbout.style.display = "flex";
+  } else {
+    footerMenu.style.display = "flex";
+    footerAbout.style.display = "none";
+  }
 };
 
 // Adding event handlers to modals and iframes so that the videos starts and stops when  function to stop and play video on ALL modals
