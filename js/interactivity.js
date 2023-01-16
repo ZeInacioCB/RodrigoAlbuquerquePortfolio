@@ -42,8 +42,6 @@ function openSection(e, sectionName) {
 function hideFooterInfo(hide) {
   let footerMenu = document.getElementById("footer-info-menu");
   let footerAbout = document.getElementById("footer-info-about");
-  console.log(footerMenu);
-  console.log(footerAbout);
   if(hide) {
     footerMenu.style.display = "none"; 
     footerAbout.style.display = "flex";
