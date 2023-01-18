@@ -7,7 +7,7 @@ for (let i = 0; i < clip.length; i++) { clip[i].addEventListener("mouseenter", f
 // Main showreel Video manipulations: toggle between unmute and mute when clicking in main video
 let video = document.querySelector("section#showreel video");
 video.onclick = () => video.muted ? video.muted = false : video.muted = true;
-video.addEventListener("mouseenter", () => video.muted = false, { once: true });
+//video.addEventListener("mouseenter", () => video.muted = false, { once: true });
 
 // navigate the site - reveals and hides different sections
 function openSection(e, sectionName) {
