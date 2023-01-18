@@ -6,8 +6,19 @@ for (let i = 0; i < clip.length; i++) { clip[i].addEventListener("mouseenter", f
 
 // Main showreel Video manipulations: toggle between unmute and mute when clicking in main video
 let video = document.querySelector("section#showreel video");
-video.onclick = () => video.muted ? video.muted = false : video.muted = true;
+//video.onclick = () => video.muted ? video.muted = false : video.muted = true;
+video.ondblclick = () => openFullscreen();
 //video.addEventListener("mouseenter", () => video.muted = false, { once: true });
+
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
 
 // navigate the site - reveals and hides different sections
 function openSection(e, sectionName) {
