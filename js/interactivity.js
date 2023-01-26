@@ -1,9 +1,3 @@
-// class to make an mp4 video play while hovering - not being use at the moment
-const clip = document.querySelectorAll(".hover-to-play");
-for (let i = 0; i < clip.length; i++) { clip[i].addEventListener("mouseenter", function (e) { clip[i].play();
-  }); clip[i].addEventListener("mouseout", function (e) { clip[i].pause(); }); 
-}
-
 // Main showreel Video manipulations: toggle between unmute and mute when clicking in main video
 let video = document.querySelector("section#showreel video");
 //video.onclick = () => video.muted ? video.muted = false : video.muted = true;

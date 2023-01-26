@@ -29,7 +29,7 @@
             <h2 class="mb-0 fw-light letter-spacing">
                 Rodrigo Albuquerque
             </h2>
-            <!--<span class="navbar-text mt-0 d-none d-sm-block">Gimbal | Camera Operator | Focus Puller</span> --> 
+            <span class="navbar-text py-0 d-lg-none fs-6">Gimbal | Focus Puller</span>
         </a>
         <!-- END Left elements -->
         
@@ -47,7 +47,7 @@
 
         <!-- START Right elements -->
         <div class="collapse navbar-collapse justify-content-end mx-0" id="navbarContent">
-            <ul class="navbar-nav m-0 ps-3 align-items-xl-center fs-5">
+            <ul class="navbar-nav m-0 px-3 align-items-end align-items-xl-center fs-5">
                 <li class="nav-item me-0 me-lg-2">
                     <a class="nav-link navLinkChange" href="#" onclick="openSection(event, 'body-gimbal')">
                         Gimbal
@@ -81,25 +81,15 @@
 
     <!-- START Showreel -->
     <section class="container-fluid p-0 m-auto my-0 mb-5 px-xxl-4 navContent" id="showreel">
-        <div class="row mx-1 mx-lg-5 mt-3"> <!-- add class ratio ratio-16x9 in case all goes wrong -->
-            <video 
-                autoplay loop controls
-                src="./videos/rodrigoAlb-showreel.mp4" 
-                type="video/mp4" 
+        <div class="row mx-1 mx-lg-5 mt-3"> 
+            <video controls autoplay playsinline muted
+                class="h-100"
+                id="showreelVid"
+                loop="loop"
                 poster="images/frame-showreel1.png"
                 >
+                <source src="./videos/rodrigoAlb-showreel.mp4" type="video/mp4"/>
             </video> 
-            <!--
-            <iframe 
-                src="https://player.vimeo.com/video/784611432?h=00a8011316&amp;autopause=1&amp;autoplay=1&amp;loop=1&amp;muted=1" 
-                id="showreel-video"
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture" 
-                allowfullscreen 
-                style="max-height: 950px;"
-                title="iscte_online_master_v4 (1440p).mp4">
-            </iframe> 
-            -->
         </div>
     </section> 
     <!-- END Showreel -->
@@ -174,9 +164,8 @@
                                     frameborder="0" 
                                     class="modal-video" 
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen="" 
                                     title="ISCTE promotional video by Rodrigo Albuquerque" 
-                                    data-ready="true">
+                                    data-ready="false">
                                 </iframe>
                             </div>
                             <div class="p-3">
@@ -217,9 +206,8 @@
                                     frameborder="0" 
                                     class="modal-video" 
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen="" 
                                     title="Filme promocional de Lisboa" 
-                                    data-ready="true">
+                                    data-ready="false">
                                 </iframe>
                             </div>
                             <div class="p-3">
@@ -263,9 +251,8 @@
                                     frameborder="0" 
                                     class="modal-video" 
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen="" 
                                     title="PICAS feat. Agir - Volta para mim" 
-                                    data-ready="true">
+                                    data-ready="false">
                                 </iframe>
                             </div>
                             <div class="p-3">
@@ -308,9 +295,8 @@
                                     frameborder="0" 
                                     class="modal-video" 
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen="" 
                                     title="Diana Lima - Pés no Chão [Official Music Video]" 
-                                    data-ready="true">
+                                    data-ready="false">
                                 </iframe>
                             </div>
                             <div class="p-3">
@@ -351,9 +337,7 @@
                                     frameborder="0" 
                                     class="modal-video" 
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen="" 
-                                    title="One Web Directors Cut Promo" 
-                                    data-ready="true">
+                                    title="One Web Directors Cut Promo">
                                 </iframe>
                             </div>
                             <div class="p-3">
@@ -401,8 +385,7 @@
                                     src="https://player.vimeo.com/video/783723648?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479"
                                     frameborder="0"
                                     class="modal-video"
-                                    allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
+                                    allow="autoplay; fullscreen; picture-in-picture"
                                     title="Cinematographer Reel">
                                 </iframe>
                             </div>
@@ -447,7 +430,6 @@
                                     frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="Campanha de Preven&amp;ccedil;&amp;atilde;o de Afogamentos de Crian&amp;ccedil;as e Jovens 2022 - APSI e GNR">
                                 </iframe>
                             </div>
@@ -490,7 +472,6 @@
                                     frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="Trailer - O Crime do Padre Amaro">
                                 </iframe>
                             </div>
@@ -539,7 +520,6 @@
                                     frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="LON3R JOHNY &amp;times; ProfJam - HALLYWUD">
                                 </iframe>
                             </div>
@@ -582,8 +562,7 @@
                                     src="https://player.vimeo.com/video/784606868?h=783723648&amp;badge=0&amp;autoplay=0&amp;loop=1&amp;autopause=1&amp;player_id=0&amp;app_id=58479" 
                                     frameborder="0"
                                     class="modal-video"
-                                    allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
+                                    allow="autoplay; fullscreen; picture-in-picture"
                                     title="Perfumes &amp;amp; Companhia -  Este Natal Surpreenda!">
                                 </iframe>
                             </div>
@@ -629,7 +608,6 @@
                                     frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="MEO Care - Queria ou Care">
                                 </iframe>
                             </div>
@@ -674,7 +652,6 @@
                                     frameborder="0"  
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="Reininho sem cerimónias no Palácio Chiado">
                                 </iframe>
                             </div>
@@ -721,7 +698,6 @@
                                     frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="MARIZA - Lágrima [Official Music Video]">
                                 </iframe>
                             </div>
@@ -764,7 +740,6 @@
                                     frameborder="0"  
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="Terras da Comporta - nature made">
                                 </iframe>
                             </div>
@@ -805,7 +780,6 @@
                                     frameborder="0"  
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="A Bárbara e a Telepizza partilham segredos.">
                                 </iframe>
                             </div>
@@ -848,7 +822,6 @@
                                     frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="Elei&amp;ccedil;&amp;otilde;es &amp;Oacute;rg&amp;atilde;os Associativos 2225">
                                 </iframe>
                             </div>
@@ -891,7 +864,6 @@
                                     frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="&amp;Eacute; melhor apostar na LOGO  30% de desconto em todos os seguros at&amp;eacute; 3009">
                                 </iframe>
                             </div>
@@ -938,7 +910,6 @@
                                     frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="ProfJam x Fernando Daniel - Suprior">
                                 </iframe>
                             </div>
@@ -981,7 +952,6 @@
                                     frameborder="0" 
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="Nobre Vegalia  Salsichas Vegwurst  Atreve-te a provar!">
                                 </iframe>
                             </div>
@@ -1025,7 +995,6 @@
                                     frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="B.E.R.A - QUERO MAIS">
                                 </iframe>
                             </div>
@@ -1066,7 +1035,6 @@
                                     frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="Venham sentir-se em casa  IKEA Portugal">
                                 </iframe>
                             </div>
@@ -1108,7 +1076,6 @@
                                     frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="Tranquilidade Investimento Protegido">
                                 </iframe>
                             </div>
@@ -1153,7 +1120,6 @@
                                     frameborder="0"
                                     class="modal-video"
                                     allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen 
                                     title="Vento Norte estreia brevemente na RTP1">
                                 </iframe>
                             </div>
