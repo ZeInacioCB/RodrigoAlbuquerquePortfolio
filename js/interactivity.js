@@ -57,34 +57,63 @@ function hideFooterInfo(hide) {
 };
 
 // Adding event handlers to modals and iframes so that the videos starts and stops when  function to stop and play video on ALL modals
-function setModalToAutoplayAndPause() {
-  const alliframes = document.querySelectorAll('iframe.modal-video');
+function toggleAllModalsAutoplayAndPause() {
   const allModals = document.querySelectorAll(".modal");
 
   for (let i = 0; i < allModals.length; i++) {
     // defining the modal and iframe for the loop
     const modal = allModals[i];
-    const iframeVideo = alliframes[i];
+    const iframeVideo1 = modal.querySelector('iframe.modal-video');
 
     // adding the event handler to start the video to each modal
     modal.addEventListener('show.bs.modal', function () {
-      let stopSrc = iframeVideo.src;
+      let stopSrc = iframeVideo1.src;
       let playSrc = stopSrc.replace("autoplay=0", "autoplay=1");
-      iframeVideo.src = playSrc;
+      iframeVideo1.src = playSrc;
     });
 
     // adding the event handler to start the video to each modal
     modal.addEventListener('hide.bs.modal', function () {
-      let playSrc = iframeVideo.src;
-      let stopSrc = playSrc.replace("autoplay=1", "autoplay=0");
-      iframeVideo.src = stopSrc;
+      let iFrameVideoList = modal.querySelectorAll('iframe.modal-video');
+      iFrameVideoList.forEach(iFrameVideo => {
+        let playSrc = iFrameVideo.src;
+        let stopSrc = playSrc.replace("autoplay=1", "autoplay=0");
+        iFrameVideo.src = stopSrc;
+      });
     });
     
   }
 
 } 
 
-setModalToAutoplayAndPause();
+// Create a similar function that can be used to stop and play video on specific modals taking parameters event and modalId
+// Obsolete and incomplete function
+function toggleModalAutoplay(modalId) {
+  // selecting iframe and modal
+  const iframeVideo = document.querySelector(`#${modalId} iframe.modal-video`);
+  console.log(modalId);
+  const modal = document.getElementById(modalId);
+  console.log(modal);
+  //const modal = document.querySelector(`#${modalId}`);
+
+  // adding the event handler to start the video to each modal
+  modal.addEventListener('show.bs.modal', function () {
+    let stopSrc = iframeVideo.src;
+    let playSrc = stopSrc.replace("autoplay=0", "autoplay=1");
+    iframeVideo.src = playSrc;
+  });
+
+  // adding the event handler to start the video to each modal
+  modal.addEventListener('hide.bs.modal', function () {
+    let playSrc = iframeVideo.src;
+    let stopSrc = playSrc.replace("autoplay=1", "autoplay=0");
+    iframeVideo.src = stopSrc;
+  });
+}
+
+
+// calling the function to set the modals to autoplay and pause
+toggleAllModalsAutoplayAndPause();
 
 
 
